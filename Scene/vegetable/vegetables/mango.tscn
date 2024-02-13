@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3udndaigeqo0"]
+[gd_scene load_steps=3 format=3 uid="uid://rsayosx8yqgq"]
 
 [ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_uq64r"]
 [ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/mango.gd" id="2_myb7f"]
