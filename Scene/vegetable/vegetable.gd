@@ -13,3 +13,6 @@ var current_growState : int
 
 var grid_position : Vector2
 
+#drag and drop function
+func _on_gui_input(event):
+	pass # Replace with function body.
