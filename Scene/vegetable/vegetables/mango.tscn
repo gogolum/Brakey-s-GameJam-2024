@@ -1,7 +1,11 @@
+
 [gd_scene load_steps=3 format=3 uid="uid://rsayosx8yqgq"]
+
 
 [ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_uq64r"]
 [ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/mango.gd" id="2_myb7f"]
+[ext_resource type="Texture2D" uid="uid://b6r6720luyewu" path="res://Assets/Legume_sprite/Fruits and Vegetables/Mango.png" id="2_pscx3"]
 
 [node name="Mango" instance=ExtResource("1_uq64r")]
+texture = ExtResource("2_pscx3")
 script = ExtResource("2_myb7f")

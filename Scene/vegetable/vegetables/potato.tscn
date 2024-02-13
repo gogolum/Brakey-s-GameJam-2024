@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://ijwfu4vim620"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_xuli7"]
+[ext_resource type="Texture2D" uid="uid://du13vc5lb0t7q" path="res://Assets/Legume_sprite/Fruits and Vegetables/Potato.png" id="2_5hcx5"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/potato.gd" id="2_clolk"]
+
+[node name="potato" instance=ExtResource("1_xuli7")]
+texture = ExtResource("2_5hcx5")
+script = ExtResource("2_clolk")

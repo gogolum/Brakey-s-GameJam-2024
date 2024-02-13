@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://csjtaqkfqeguj"]
+[gd_scene load_steps=4 format=3 uid="uid://csjtaqkfqeguj"]
 
 [ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_qjisp"]
+[ext_resource type="Texture2D" uid="uid://bgs0dbxeof8nn" path="res://Assets/Legume_sprite/Fruits and Vegetables/Grapes Red.png" id="2_odcs1"]
 [ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/grapes.gd" id="2_wlwjt"]
 
 [node name="Grapes" instance=ExtResource("1_qjisp")]
+texture = ExtResource("2_odcs1")
 script = ExtResource("2_wlwjt")
 price = 10

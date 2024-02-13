@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c20hoekcmpw7m"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_ymj4g"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/turnip.gd" id="2_01mse"]
+[ext_resource type="Texture2D" uid="uid://1vahm1i7par3" path="res://Assets/Legume_sprite/Fruits and Vegetables/Turnip.png" id="2_miw3v"]
+
+[node name="turnip" instance=ExtResource("1_ymj4g")]
+texture = ExtResource("2_miw3v")
+script = ExtResource("2_01mse")

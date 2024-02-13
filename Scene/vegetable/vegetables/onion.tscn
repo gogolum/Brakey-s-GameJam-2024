@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://yxas36s665en"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_5vhai"]
+[ext_resource type="Texture2D" uid="uid://bmx73e3mvpe43" path="res://Assets/Legume_sprite/Fruits and Vegetables/Onion White.png" id="2_pk8eb"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/onion.gd" id="2_ruh1o"]
+
+[node name="onion" instance=ExtResource("1_5vhai")]
+texture = ExtResource("2_pk8eb")
+script = ExtResource("2_ruh1o")

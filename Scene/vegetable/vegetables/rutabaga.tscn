@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm81rui4hb8fv"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_s0t8d"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/rutabaga.gd" id="2_4587v"]
+[ext_resource type="Texture2D" uid="uid://bugg6nmp6527v" path="res://Assets/Legume_sprite/Fruits and Vegetables/Rutabaga.png" id="2_cfjhg"]
+
+[node name="rutabaga" instance=ExtResource("1_s0t8d")]
+texture = ExtResource("2_cfjhg")
+script = ExtResource("2_4587v")
