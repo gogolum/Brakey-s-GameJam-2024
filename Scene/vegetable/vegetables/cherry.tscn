@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://binmymt5y2d0w"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_1gni1"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/cherry.gd" id="2_hap7w"]
+[ext_resource type="Texture2D" uid="uid://c3rh4d36vijpb" path="res://Assets/Legume_sprite/Fruits and Vegetables/Cherry.png" id="2_omecu"]
+
+[node name="cherry" instance=ExtResource("1_1gni1")]
+texture = ExtResource("2_omecu")
+script = ExtResource("2_hap7w")

@@ -16,4 +16,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Tomato" parent="." instance=ExtResource("2_wunvt")]
-position = Vector2(395, 160)
+layout_mode = 0
+offset_left = 395.0
+offset_top = 160.0
+offset_right = 395.0
+offset_bottom = 160.0

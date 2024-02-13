@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgnrt7pi1435m"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_3cssv"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/wheat.gd" id="2_gquxk"]
+[ext_resource type="Texture2D" uid="uid://cd17dt5ml5vgl" path="res://Assets/Legume_sprite/Fruits and Vegetables/Wheat.png" id="2_phfr7"]
+
+[node name="wheat" instance=ExtResource("1_3cssv")]
+texture = ExtResource("2_phfr7")
+script = ExtResource("2_gquxk")

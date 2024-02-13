@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4p2hroklgcjc"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_h35s7"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/jalapeno.gd" id="2_0i1bg"]
+[ext_resource type="Texture2D" uid="uid://dghc4otk8vg8v" path="res://Assets/Legume_sprite/Fruits and Vegetables/Jalapeno.png" id="2_laufb"]
+
+[node name="jalapeno" instance=ExtResource("1_h35s7")]
+texture = ExtResource("2_laufb")
+script = ExtResource("2_0i1bg")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://safyyprrpyqo"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_h0ypo"]
+[ext_resource type="Texture2D" uid="uid://qe04ejpnl6vi" path="res://Assets/Legume_sprite/Fruits and Vegetables/Pumpkin.png" id="2_sumbu"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/pumpkin.gd" id="2_wrecj"]
+
+[node name="pumpkin" instance=ExtResource("1_h0ypo")]
+texture = ExtResource("2_sumbu")
+script = ExtResource("2_wrecj")

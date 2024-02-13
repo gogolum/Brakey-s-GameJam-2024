@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl07a28pomv5l"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_xpaxe"]
+[ext_resource type="Texture2D" uid="uid://dsvywlpw72at2" path="res://Assets/Legume_sprite/Fruits and Vegetables/Banana.png" id="2_1l1d3"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/banana.gd" id="2_bhnls"]
+
+[node name="banana" instance=ExtResource("1_xpaxe")]
+texture = ExtResource("2_1l1d3")
+script = ExtResource("2_bhnls")
