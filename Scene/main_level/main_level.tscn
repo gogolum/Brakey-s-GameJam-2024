@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://kf03i6o7vpe8"]
+[gd_scene load_steps=3 format=3 uid="uid://kf03i6o7vpe8"]
 
 [ext_resource type="PackedScene" uid="uid://btelc5pviqh5r" path="res://Scene/garden/garden.tscn" id="1_u2uwf"]
+[ext_resource type="PackedScene" uid="uid://dbs3augtl18k4" path="res://Scene/vegetable/vegetables/tomato.tscn" id="2_wunvt"]
 
 [node name="MainLevel" type="Control"]
 layout_mode = 3
@@ -13,3 +14,6 @@ offset_bottom = 40.0
 [node name="Garden" parent="CanvasLayer2" instance=ExtResource("1_u2uwf")]
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="Tomato" parent="." instance=ExtResource("2_wunvt")]
+position = Vector2(395, 160)

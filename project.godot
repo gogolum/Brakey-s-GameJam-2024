@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Brakey's gamejam"
+run/main_scene="res://Scene/main_level/main_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalInfo="*res://Scene/global/globalInfo.gd"
 
 [display]
 
