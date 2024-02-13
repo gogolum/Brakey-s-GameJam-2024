@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc3brr5ponmpt"]
+
+[ext_resource type="Texture2D" uid="uid://c1u61wmgjsnpb" path="res://Assets/Legume_sprite/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt.png" id="1_m1in5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15tq6"]
+atlas = ExtResource("1_m1in5")
+region = Rect2(10, 10, 28, 28)
+
+[node name="Slot" type="TextureRect"]
+modulate = Color(0.32549, 0.227451, 0.0901961, 1)
+offset_right = 100.0
+offset_bottom = 100.0
+texture = SubResource("AtlasTexture_15tq6")
+stretch_mode = 4
+
+[node name="SlotSnappingPoint" type="Marker2D" parent="."]

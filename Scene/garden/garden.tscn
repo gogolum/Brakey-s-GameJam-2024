@@ -1,9 +1,20 @@
-[gd_scene format=3 uid="uid://btelc5pviqh5r"]
+[gd_scene load_steps=2 format=3 uid="uid://btelc5pviqh5r"]
+
+[ext_resource type="Script" path="res://Garden.gd" id="1_2j0lf"]
 
 [node name="Garden" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 0
+offset_left = 661.0
+offset_top = 383.0
+offset_right = 661.0
+offset_bottom = 383.0
+scale = Vector2(2.5, 2.5)
+
+[node name="GardenGrid" type="GridContainer" parent="."]
+layout_mode = 2
 grow_horizontal = 2
 grow_vertical = 2
+columns = 5
+script = ExtResource("1_2j0lf")
+metadata/_edit_use_anchors_ = true
