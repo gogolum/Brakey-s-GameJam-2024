@@ -2,7 +2,5 @@
 
 [ext_resource type="Script" path="res://Scene/vegetable/vegetable.gd" id="1_vjb0w"]
 
-[node name="Vegetable" type="Node2D"]
+[node name="Vegetable" type="TextureRect"]
 script = ExtResource("1_vjb0w")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

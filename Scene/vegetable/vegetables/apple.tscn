@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwe61a2s627xs"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_b33ph"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/apple.gd" id="2_lveld"]
+
+[node name="apple" instance=ExtResource("1_b33ph")]
+script = ExtResource("2_lveld")
