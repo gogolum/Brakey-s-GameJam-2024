@@ -5,8 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cexnff5ybyudc" path="res://Assets/Legume_sprite/Fruits and Vegetables/Tomato.png" id="3_q8idc"]
 
 [node name="Tomato" instance=ExtResource("1_3tlg6")]
+texture = ExtResource("3_q8idc")
 script = ExtResource("2_47oun")
 stat_catastrophe = [2, 0, 0, 0]
-
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("3_q8idc")

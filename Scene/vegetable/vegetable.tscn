@@ -4,3 +4,5 @@
 
 [node name="Vegetable" type="TextureRect"]
 script = ExtResource("1_vjb0w")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
