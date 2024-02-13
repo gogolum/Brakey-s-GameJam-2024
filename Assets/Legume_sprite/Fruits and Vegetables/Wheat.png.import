@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dswt2oqkkhpnn"
-path="res://.godot/imported/icon2.svg-72130b1822965a82303075846d8629f5.ctex"
+uid="uid://cd17dt5ml5vgl"
+path="res://.godot/imported/Wheat.png-bfa5349c6d559e33c5f7e3ca0b9552f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon2.svg"
-dest_files=["res://.godot/imported/icon2.svg-72130b1822965a82303075846d8629f5.ctex"]
+source_file="res://Assets/Legume_sprite/Fruits and Vegetables/Wheat.png"
+dest_files=["res://.godot/imported/Wheat.png-bfa5349c6d559e33c5f7e3ca0b9552f0.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
