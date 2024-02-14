@@ -4,6 +4,8 @@ extends Control
 func _ready():
 	set_price()
 
+
+
 func set_price():
 	for element in $ShopList.get_children():
 		var vegetable_sold = element.get_node("Marker2D").get_child(0).get_child(0)

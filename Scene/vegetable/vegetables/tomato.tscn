@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cexnff5ybyudc" path="res://Assets/Legume_sprite/Fruits and Vegetables/Tomato.png" id="3_q8idc"]
 
 [node name="Tomato" instance=ExtResource("1_3tlg6")]
-offset_right = 32.0
-offset_bottom = 32.0
 texture = ExtResource("3_q8idc")
 script = ExtResource("2_47oun")
 price = 3
-stat_catastrophe = [2, 0, 0, 0]
