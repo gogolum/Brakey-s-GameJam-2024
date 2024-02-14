@@ -7,3 +7,9 @@
 [node name="turnip" instance=ExtResource("1_ymj4g")]
 texture = ExtResource("2_miw3v")
 script = ExtResource("2_01mse")
+vegetable_name = "turnip"
+type = "sun"
+price = 9
+stat_catastrophe = [2, 0, 0, 1]
+effect_description = "gain 2 tsunami for each empty adjacent tile "
+growing_time = 3

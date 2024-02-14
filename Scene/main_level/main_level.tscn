@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://kf03i6o7vpe8"]
+[gd_scene load_steps=4 format=3 uid="uid://kf03i6o7vpe8"]
 
 [ext_resource type="PackedScene" uid="uid://btelc5pviqh5r" path="res://Scene/garden/garden.tscn" id="1_u2uwf"]
 [ext_resource type="PackedScene" uid="uid://ckqoxsy34xfbs" path="res://Scene/shop/shop.tscn" id="2_omnbv"]
+[ext_resource type="PackedScene" uid="uid://cpxhoo1mrdxt6" path="res://Scene/Ui/StatDisplay.tscn" id="3_8tgbo"]
 
 [node name="MainLevel" type="Control"]
 layout_mode = 3
@@ -16,3 +17,5 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Shop" parent="CanvasLayer2" instance=ExtResource("2_omnbv")]
+
+[node name="StatDisplay" parent="CanvasLayer2" instance=ExtResource("3_8tgbo")]
