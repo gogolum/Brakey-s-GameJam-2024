@@ -70,7 +70,9 @@ func grid_update():
 			var slot_child = grid_slot.get_child(0).get_children()
 			if slot_child != []:
 				control_list[i][j] = slot_child[0]
-	#print(control_list)
+			else :
+				control_list[i][j] = []
+	print(control_list)
 	
 
 func _ready():
