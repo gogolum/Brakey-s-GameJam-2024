@@ -6,4 +6,5 @@ extends Control
 
 func setBanner(vegetable : Vegetable):
 	texture_rect.texture = vegetable.texture
+	
 
