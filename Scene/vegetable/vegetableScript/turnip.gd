@@ -2,11 +2,11 @@ extends Vegetable
 
 
 # pas les bonnes stats
-
+#[[],[turnip],[wheat],[]]
 func effect(adjacent : Array):
 	
-	for n in adjacent:
-		if adjacent[n] == null:
+	for element in adjacent:
+		if element == null:
 			stat_catastrophe[3] += 2
 			pass
 		pass
