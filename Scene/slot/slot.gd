@@ -8,7 +8,6 @@ func _process(_delta):
 	else :
 		self_modulate = Color(0.682, 0.498, 0.247)
 		
-		
 
 func _on_mouse_exited():
 	if not Rect2(Vector2(), size).has_point(get_local_mouse_position()):
