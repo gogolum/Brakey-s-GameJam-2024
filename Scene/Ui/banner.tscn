@@ -390,7 +390,7 @@ offset_bottom = 310.0
 
 [node name="Buy" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-text = "Buy:"
+text = " Buy:"
 label_settings = SubResource("LabelSettings_te1qg")
 
 [node name="BuyValue" type="Label" parent="HBoxContainer"]
