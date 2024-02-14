@@ -7,3 +7,9 @@
 [node name="broccoli" instance=ExtResource("1_uj6ht")]
 texture = ExtResource("2_1pjck")
 script = ExtResource("2_u8ory")
+vegetable_name = "broccoli"
+type = "sun"
+price = 9
+stat_catastrophe = [0, 2, 0, 0]
+effect_description = "gain 3 tsunami for each fruit and sun plant"
+growing_time = 6
