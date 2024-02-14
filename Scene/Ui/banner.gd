@@ -5,7 +5,7 @@ extends Control
 @onready var buy_value = $HBoxContainer/BuyValue
 @onready var sell_value = $HBoxContainer/SellValue
 
-@onready var growing_time = $HBoxContainer2/growingTime
+@onready var growing_time_valeur = $growingTimeValeur
 
 @onready var description_effect = $VBoxContainer/DescriptionEffect
 
@@ -20,7 +20,7 @@ func setBanner(vegetable : Vegetable):
 	texture_rect.texture = vegetable.vegetable_texture.texture
 	buy_value.text = str(vegetable.price)
 	sell_value.text = str(vegetable.sell_price)
-	growing_time.text = str(vegetable.growing_time)
+	growing_time_valeur.text = str(vegetable.growing_time)
 	description_effect.text = str(vegetable.effect_description)
 	#stat
 	earthquake_value.text = str(vegetable.stat_catastrophe[0])
