@@ -8,6 +8,6 @@
 script = ExtResource("2_47oun")
 price = 3
 
-[node name="VegetableTexture" parent="." index="2"]
+[node name="VegetableTexture" parent="." index="1"]
 layout_mode = 0
 texture = ExtResource("3_q8idc")

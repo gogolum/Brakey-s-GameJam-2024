@@ -20,6 +20,7 @@ texture = ExtResource("2_r3qm1")
 
 [node name="VegetableTexture" type="TextureRect" parent="."]
 show_behind_parent = true
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
