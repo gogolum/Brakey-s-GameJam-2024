@@ -22,6 +22,10 @@ signal mouse_released
 signal picked_up_changed(picked)
 
 var isover_empty_plot : bool
+func effect(adjacent : Array):
+	print(adjacent)
+	pass
+
 var picked_up : bool = false :
 	set(b):
 		if not b:

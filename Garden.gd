@@ -39,21 +39,20 @@ func generate_grid(nb_rows : int, nb_columns : int):
 
 #find all the adjacents slots next to some given coordinates
 func get_adjacent_tiles(coordinates : Vector2):
-	
 	#sets variable to return
 	var new_coords : Array = []
 	
 	if coordinates.x > 0:
-		new_coords.append(control_list[coordinates.x][coordinates.y - 1])
-	
-	if coordinates.x < grid_rows :
-		new_coords.append(control_list[coordinates.x][coordinates.y + 1])
-	
-	if coordinates.y > 0:
 		new_coords.append(control_list[coordinates.x - 1][coordinates.y])
 	
-	if coordinates.y < grid_columns:
+	if coordinates.x < grid_rows - 1:
 		new_coords.append(control_list[coordinates.x + 1][coordinates.y])
+	
+	if coordinates.y > 0:
+		new_coords.append(control_list[coordinates.x][coordinates.y - 1])
+	
+	if coordinates.y < grid_columns - 1:
+		new_coords.append(control_list[coordinates.x][coordinates.y + 1])
 		
 	return new_coords
 
@@ -69,7 +68,7 @@ func grid_update():
 			#check if there is a vegetable as a child to the grid slot
 			var slot_child = grid_slot.get_child(0).get_children()
 			if slot_child != []:
-				control_list[i][j] = slot_child[0]
+				control_list[i][j] = [slot_child[0]]
 			else :
 				control_list[i][j] = []
 	
@@ -80,8 +79,8 @@ func grid_update():
 			var garden_vegetable = control_list[i][j]
 			
 			#check if current slot isn't empty
-			if garden_vegetable != []:
-				garden_vegetable.effect(get_adjacent_tiles(Vector2(i,j)))
+			if garden_vegetable != [] :
+				garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)))
 	
 
 func _ready():
