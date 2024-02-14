@@ -7,5 +7,4 @@ func effect(adjacent : Array):
 			new_stat_catastrophe[3] += 2
 			pass
 		pass
-	
 	pass
