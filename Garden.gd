@@ -56,7 +56,26 @@ func get_adjacent_tiles(coordinates : Vector2):
 		new_coords.append(control_list[coordinates.x + 1][coordinates.y])
 		
 	return new_coords
+
+func grid_update():
+	
+	#go through all rows and columns via control list
+	for i in range(len(control_list)):
+		for j in range(len(control_list[0])):
+			
+			#get grid slot
+			var grid_slot =  slot_list[i][j]
+			
+			#check if there is a vegetable as a child to the grid slot
+			var slot_child = grid_slot.get_child(0).get_children()
+			print(slot_child)
+			if slot_child != []:
+				control_list[i][j] = slot_child[0]
+	#print(control_list)
 	
 
 func _ready():
 	generate_grid(grid_rows, grid_columns)
+	
+func _process(delta):
+	grid_update()
