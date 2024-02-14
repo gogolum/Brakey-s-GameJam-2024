@@ -2,8 +2,8 @@ extends TextureRect
 class_name  Vegetable
 
 @export var vegetable_name : String
-@export var type : String
 
+@export var type : String
 @export var price: int 
 
 @export var stat_catastrophe : Array = [0,0,0,0] #0 = tramblement de terre; 1 = incendi; 2 = tornade ; 3 = tsunami
@@ -20,6 +20,9 @@ var grid_position : Vector2
 #drag variables
 signal mouse_released
 signal picked_up_changed(picked)
+
+@onready var drag_button = $DragButton
+
 
 var isover_empty_plot : bool
 func effect(adjacent : Array):
@@ -41,6 +44,12 @@ func _process(_delta):
 		
 	if Input.is_action_just_released("LeftClick"):
 		mouse_released.emit()
+		
+	if drag_button.is_hovered():
+		GlobalInfo.hoovered_vegetable = self
+
+
+
 
 func _on_drag_button_pressed():
 	if !isbought:
@@ -58,4 +67,6 @@ func _on_drag_button_pressed():
 			
 func destroy():
 	queue_free()
+
+
 

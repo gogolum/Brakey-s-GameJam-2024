@@ -20,6 +20,7 @@ var vegetables : Dictionary = {
 }
 
 var hoovered_plot : TextureRect
+var hoovered_vegetable : Vegetable
 
 # gestion de l'argent entre les scenes
 signal udpate_stat
