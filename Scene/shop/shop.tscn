@@ -12,11 +12,12 @@ region = Rect2(162, 226, 60, 28)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = 140.0
+offset_top = -8.0
+offset_right = 140.0
+offset_bottom = -8.0
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_pdmdl")
 
 [node name="ShopList" type="GridContainer" parent="."]
@@ -66,6 +67,7 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
@@ -110,6 +112,7 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot2/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
@@ -154,6 +157,7 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot3/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
@@ -198,6 +202,7 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot4/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
@@ -242,6 +247,7 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot5/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
@@ -286,9 +292,17 @@ offset_bottom = -104.0
 mouse_filter = 2
 
 [node name="Tomato" parent="ShopList/ShopSlot6/Marker2D/VegetableToSell" instance=ExtResource("2_4ycha")]
+show_behind_parent = false
 layout_mode = 0
 offset_left = 38.0
 offset_top = 142.75
 offset_right = 70.0
 offset_bottom = 174.75
 pivot_offset = Vector2(0, 0)
+
+[connection signal="gui_input" from="ShopList/ShopSlot/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]
+[connection signal="gui_input" from="ShopList/ShopSlot2/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot2/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]
+[connection signal="gui_input" from="ShopList/ShopSlot3/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot3/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]
+[connection signal="gui_input" from="ShopList/ShopSlot4/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot4/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]
+[connection signal="gui_input" from="ShopList/ShopSlot5/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot5/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]
+[connection signal="gui_input" from="ShopList/ShopSlot6/Marker2D/VegetableToSell/Tomato" to="ShopList/ShopSlot6/Marker2D/VegetableToSell/Tomato" method="_on_gui_input"]

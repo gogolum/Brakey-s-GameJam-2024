@@ -5,16 +5,17 @@
 [node name="Garden" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 661.0
-offset_top = 383.0
-offset_right = 661.0
-offset_bottom = 383.0
+offset_left = 623.0
+offset_top = 328.0
+offset_right = 623.0
+offset_bottom = 328.0
 scale = Vector2(2.5, 2.5)
 
 [node name="GardenGrid" type="GridContainer" parent="."]
 layout_mode = 2
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.2, 1.2)
 columns = 5
 script = ExtResource("1_2j0lf")
 metadata/_edit_use_anchors_ = true

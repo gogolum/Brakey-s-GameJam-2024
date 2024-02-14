@@ -331,6 +331,7 @@ font_size = 40
 font_color = Color(0, 0, 0, 1)
 
 [node name="StatDisplay" type="Control"]
+show_behind_parent = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

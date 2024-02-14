@@ -8,7 +8,6 @@ var grid_columns : int = 5
 var control_list : Array = []
 var slot_list : Array = []
 
-
 #slot packedscene
 var slot_scene : PackedScene = load("res://Scene/slot/slot.tscn")
 
