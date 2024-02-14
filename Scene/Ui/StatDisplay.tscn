@@ -385,7 +385,7 @@ label_settings = SubResource("LabelSettings_rxqqh")
 layout_mode = 2
 texture = ExtResource("6_g2u67")
 
-[node name="TsuanmiValue" type="Label" parent="HBoxContainer"]
+[node name="TsunamiValue" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_rxqqh")

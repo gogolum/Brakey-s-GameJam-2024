@@ -4,10 +4,11 @@ func _ready():
 	pass
 
 func effect(adjacent : Array):
-	var new_stat_catastrophe : Array = stat_catastrophe.duplicate()
+	var new_stat : Array = stat_catastrophe.duplicate()
 	for element in adjacent:
 		if element == []:
-			new_stat_catastrophe[3] += 2
+			new_stat[3] += 2
+	new_stat_catastrophe = new_stat
 
 
 

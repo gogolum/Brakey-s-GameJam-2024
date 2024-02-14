@@ -72,7 +72,7 @@ func grid_update():
 			else :
 				control_list[i][j] = []
 	
-	#change effects for all the plants in the garden
+	#change effects for all the plants in the garden and total effect
 	for i in range(len(control_list)):
 		for j in range(len(control_list[0])):
 			
@@ -80,8 +80,36 @@ func grid_update():
 			
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
+				garden_vegetable[0].grown_state()
 				garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)))
+
+	var total_stat = [0, 0, 0, 0]
+	for i in range(len(control_list)):
+		for j in range(len(control_list[0])):
+			
+			var garden_vegetable = control_list[i][j]
+			
+			#check if current slot isn't empty
+			if garden_vegetable != [] :
+				for k in range(4):
+					print(garden_vegetable[0].new_stat_catastrophe)
+					total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
 	
+	GlobalInfo.global_stats = total_stat
+	
+	#search for stats display
+	var stat_display_node = get_parent().get_parent().get_node("StatDisplay").get_node("HBoxContainer")
+	var global_stats = GlobalInfo.global_stats
+	
+	var earthquake_label = stat_display_node.get_node("EarthquakeValue")
+	var fire_label = stat_display_node.get_node("FireValue")
+	var tornado_label = stat_display_node.get_node("TornadoValue")
+	var tsunami_label = stat_display_node.get_node("TsunamiValue")
+
+	earthquake_label.text = str(global_stats[0])
+	fire_label.text = str(global_stats[1])
+	tornado_label.text = str(global_stats[2])
+	tsunami_label.text = str(global_stats[3])	
 
 func _ready():
 	generate_grid(grid_rows, grid_columns)

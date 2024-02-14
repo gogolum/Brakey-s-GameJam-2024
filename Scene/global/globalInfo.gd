@@ -28,3 +28,6 @@ var coin : int = 10:
 	set(value):
 		coin = value
 		udpate_stat.emit()
+		
+#global stats for the grid
+var global_stats : Array = [0, 0, 0, 0]
