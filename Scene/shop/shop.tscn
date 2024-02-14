@@ -77,7 +77,6 @@ offset_top = 142.75
 offset_right = 70.0
 offset_bottom = 174.75
 pivot_offset = Vector2(0, 0)
-stat_catastrophe = [0, 0, 0, 0]
 
 [node name="ShopSlot2" type="TextureRect" parent="ShopList"]
 layout_mode = 2
@@ -123,7 +122,6 @@ offset_top = 142.75
 offset_right = 70.0
 offset_bottom = 174.75
 pivot_offset = Vector2(0, 0)
-stat_catastrophe = [0, 0, 0, 0]
 
 [node name="ShopSlot3" type="TextureRect" parent="ShopList"]
 layout_mode = 2
@@ -169,7 +167,6 @@ offset_top = 142.75
 offset_right = 70.0
 offset_bottom = 174.75
 pivot_offset = Vector2(0, 0)
-stat_catastrophe = [0, 0, 0, 0]
 
 [node name="ShopSlot4" type="TextureRect" parent="ShopList"]
 layout_mode = 2
@@ -215,7 +212,6 @@ offset_top = 142.75
 offset_right = 70.0
 offset_bottom = 174.75
 pivot_offset = Vector2(0, 0)
-stat_catastrophe = [0, 0, 0, 0]
 
 [node name="ShopSlot5" type="TextureRect" parent="ShopList"]
 layout_mode = 2
