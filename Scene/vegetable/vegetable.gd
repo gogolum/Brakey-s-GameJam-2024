@@ -48,8 +48,8 @@ func _on_drag_button_pressed():
 		if GlobalInfo.hoovered_plot and GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').get_children() == []:
 			var vegetable = self
 			get_parent().remove_child(vegetable)
-			GlobalInfo.hoovered_plot.add_child(vegetable)
-			vegetable.global_position = get_parent().get_node('SlotSnappingPoint').global_position
+			GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').add_child(vegetable)
+			vegetable.global_position = get_parent().get_parent().get_node('SlotSnappingPoint').global_position
 			isbought = true
 			GlobalInfo.coin -= vegetable.price
 

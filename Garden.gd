@@ -68,7 +68,6 @@ func grid_update():
 			
 			#check if there is a vegetable as a child to the grid slot
 			var slot_child = grid_slot.get_child(0).get_children()
-			print(slot_child)
 			if slot_child != []:
 				control_list[i][j] = slot_child[0]
 	#print(control_list)
