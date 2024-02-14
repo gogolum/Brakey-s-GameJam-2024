@@ -55,4 +55,7 @@ func _on_drag_button_pressed():
 			vegetable.global_position = get_parent().get_parent().get_node('SlotSnappingPoint').global_position
 			isbought = true
 			GlobalInfo.coin -= vegetable.price
+			
+func destroy():
+	queue_free()
 
