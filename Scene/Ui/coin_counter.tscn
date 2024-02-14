@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnr70w8b58hj5"]
+
+[ext_resource type="Script" path="res://Scene/Ui/coin_counter.gd" id="1_amcm1"]
+[ext_resource type="Texture2D" uid="uid://cv7xdq56i8d47" path="res://Assets/Legume_sprite/01.png" id="1_for7t"]
+[ext_resource type="Texture2D" uid="uid://bme3yrpqwj0jx" path="res://Assets/icon/MonedaD.png" id="2_hmals"]
+[ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="3_uksxs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sna5"]
+atlas = ExtResource("1_for7t")
+region = Rect2(256, 97, 32, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ye1o"]
+atlas = ExtResource("2_hmals")
+region = Rect2(1, 0, 14, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4vrl"]
+font = ExtResource("3_uksxs")
+font_size = 71
+font_color = Color(0, 0, 0, 1)
+
+[node name="CoinCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_amcm1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6sna5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = -1.0
+offset_top = 46.0
+offset_right = 285.0
+offset_bottom = 196.0
+scale = Vector2(0.6, 0.6)
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_6ye1o")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Coin counter" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_w4vrl")

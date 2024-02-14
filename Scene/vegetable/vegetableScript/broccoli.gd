@@ -5,3 +5,6 @@ func effect(adjacent : Array):
 	for element in adjacent:
 		if element.type == "sun" or element.type == "fruit":
 			new_stat_catastrophe[3] += 3
+			pass
+		pass
+	pass
