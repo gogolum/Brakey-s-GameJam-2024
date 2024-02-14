@@ -4,9 +4,9 @@ var on_plot : bool = false
 
 func _process(_delta):
 	if GlobalInfo.hoovered_plot != self:
-		modulate = Color(0.325, 0.227, 0.09)
+		self_modulate = Color(0.325, 0.227, 0.09)
 	else :
-		modulate = Color(0.682, 0.498, 0.247)
+		self_modulate = Color(0.682, 0.498, 0.247)
 		
 		
 

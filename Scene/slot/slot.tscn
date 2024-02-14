@@ -8,14 +8,13 @@ atlas = ExtResource("1_m1in5")
 region = Rect2(10, 10, 28, 28)
 
 [node name="Slot" type="TextureRect"]
-modulate = Color(0.32549, 0.227451, 0.0901961, 1)
 offset_right = 100.0
 offset_bottom = 100.0
 texture = SubResource("AtlasTexture_15tq6")
-stretch_mode = 4
 script = ExtResource("2_256t2")
 
 [node name="SlotSnappingPoint" type="Marker2D" parent="."]
+position = Vector2(-2, -2)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
