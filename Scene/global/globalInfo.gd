@@ -6,17 +6,17 @@ var vegetables : Dictionary = {
 	'TURNIP' : preload("res://Scene/vegetable/vegetables/turnip.tscn"),
 	'RUTABAGA' : preload("res://Scene/vegetable/vegetables/rutabaga.tscn"),
 	'PUMPKIN' : preload("res://Scene/vegetable/vegetables/pumpkin.tscn"),
-	'POTATO' : preload("res://Scene/vegetable/vegetables/potato.tscn"),
-	'ONION' : preload("res://Scene/vegetable/vegetables/onion.tscn"),
-	'MANGO' : preload("res://Scene/vegetable/vegetables/mango.tscn"),
-	'LETTUCE' : preload("res://Scene/vegetable/vegetables/lettuce.tscn"),
-	'JALAPENO' : preload("res://Scene/vegetable/vegetables/jalapeno.tscn"),
-	'GRAPES' : preload("res://Scene/vegetable/vegetables/grapes.tscn"),
-	'CHERRY' : preload("res://Scene/vegetable/vegetables/cherry.tscn"),
-	'BROCCOLI' : preload("res://Scene/vegetable/vegetables/broccoli.tscn"),
-	'BEET' : preload("res://Scene/vegetable/vegetables/beet.tscn"),
-	'BANANA' : preload("res://Scene/vegetable/vegetables/banana.tscn"),
-	'APPLE' : preload("res://Scene/vegetable/vegetables/apple.tscn")
+	'POTATO' : preload("res://Scene/vegetable/vegetables/potato.tscn")
+	#'ONION' : preload("res://Scene/vegetable/vegetables/onion.tscn"),
+	#'MANGO' : preload("res://Scene/vegetable/vegetables/mango.tscn"),
+	#'LETTUCE' : preload("res://Scene/vegetable/vegetables/lettuce.tscn"),
+	#'JALAPENO' : preload("res://Scene/vegetable/vegetables/jalapeno.tscn"),
+	#'GRAPES' : preload("res://Scene/vegetable/vegetables/grapes.tscn"),
+	#'CHERRY' : preload("res://Scene/vegetable/vegetables/cherry.tscn"),
+	#'BROCCOLI' : preload("res://Scene/vegetable/vegetables/broccoli.tscn"),
+	#'BEET' : preload("res://Scene/vegetable/vegetables/beet.tscn"),
+	#'BANANA' : preload("res://Scene/vegetable/vegetables/banana.tscn"),
+	#'APPLE' : preload("res://Scene/vegetable/vegetables/apple.tscn")
 }
 
 var hoovered_plot : TextureRect

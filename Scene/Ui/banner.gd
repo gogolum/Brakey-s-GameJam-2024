@@ -17,7 +17,7 @@ extends Control
 
 
 func setBanner(vegetable : Vegetable):
-	texture_rect.texture = vegetable.self_texture
+	texture_rect.texture = vegetable.vegetable_texture.texture
 	buy_value.text = str(vegetable.price)
 	sell_value.text = str(vegetable.sell_price)
 	growing_time.text = str(vegetable.growing_time)

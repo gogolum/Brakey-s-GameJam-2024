@@ -5,5 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c3rh4d36vijpb" path="res://Assets/Legume_sprite/Fruits and Vegetables/Cherry.png" id="2_omecu"]
 
 [node name="cherry" instance=ExtResource("1_1gni1")]
-texture = ExtResource("2_omecu")
 script = ExtResource("2_hap7w")
+
+[node name="VegetableTexture" parent="." index="2"]
+layout_mode = 0
+texture = ExtResource("2_omecu")

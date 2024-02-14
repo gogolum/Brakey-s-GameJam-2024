@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://1vahm1i7par3" path="res://Assets/Legume_sprite/Fruits and Vegetables/Turnip.png" id="2_miw3v"]
 
 [node name="turnip" instance=ExtResource("1_ymj4g")]
-texture = ExtResource("2_miw3v")
 script = ExtResource("2_01mse")
 vegetable_name = "turnip"
 type = "sun"
@@ -13,3 +12,7 @@ price = 9
 stat_catastrophe = [1, 2, 3, 4]
 effect_description = "gain 2 tsunami for each empty adjacent tile "
 growing_time = 3
+
+[node name="VegetableTexture" parent="." index="1"]
+layout_mode = 0
+texture = ExtResource("2_miw3v")

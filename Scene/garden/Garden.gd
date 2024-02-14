@@ -91,9 +91,9 @@ func grid_update():
 			
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
-				for k in range(4):
-					print(garden_vegetable[0].new_stat_catastrophe)
-					total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
+				if garden_vegetable[0].current_growState >= garden_vegetable[0].growing_time:
+					for k in range(4):
+						total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
 	
 	GlobalInfo.global_stats = total_stat
 	
