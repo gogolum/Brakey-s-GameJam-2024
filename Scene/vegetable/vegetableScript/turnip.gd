@@ -1,4 +1,5 @@
 extends Vegetable
+
 func _ready():
 	stat_catastrophe = [1,2,3,4]
 	pass

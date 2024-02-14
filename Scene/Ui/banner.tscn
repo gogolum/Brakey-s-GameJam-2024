@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c07iok3ds5ejs"]
+[gd_scene load_steps=15 format=3 uid="uid://c07iok3ds5ejs"]
 
 [ext_resource type="Script" path="res://Scene/Ui/banner.gd" id="1_afdy1"]
 [ext_resource type="Texture2D" uid="uid://cv7xdq56i8d47" path="res://Assets/Legume_sprite/01.png" id="1_lp1l5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cmvlusjnnefct" path="res://Assets/icon/fireIcon.png" id="6_smgbp"]
 [ext_resource type="Texture2D" uid="uid://j624qows4ax5" path="res://Assets/icon/tornadoIcon.png" id="7_122tb"]
 [ext_resource type="Texture2D" uid="uid://biuitxcerchkh" path="res://Assets/icon/tsunamiIcon.png" id="8_5bweg"]
+[ext_resource type="Texture2D" uid="uid://bqdq5nyvusqfk" path="res://Assets/Legume_sprite/sproot.png" id="9_a2a6w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2lq5"]
 texture = ExtResource("1_lp1l5")
@@ -457,8 +458,9 @@ offset_right = 1078.0
 offset_bottom = 444.0
 scale = Vector2(0.5, 0.5)
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
+[node name="GrowingTexture" type="TextureRect" parent="HBoxContainer2"]
 layout_mode = 2
+texture = ExtResource("9_a2a6w")
 
 [node name="growingTime" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
