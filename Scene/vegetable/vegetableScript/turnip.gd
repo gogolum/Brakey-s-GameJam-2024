@@ -1,6 +1,7 @@
 extends Vegetable
 
 func _ready():
+	current_growState = 0
 	stat_catastrophe = [1,2,3,4]
 	pass
 

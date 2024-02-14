@@ -5,5 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bugg6nmp6527v" path="res://Assets/Legume_sprite/Fruits and Vegetables/Rutabaga.png" id="2_cfjhg"]
 
 [node name="rutabaga" instance=ExtResource("1_s0t8d")]
-texture = ExtResource("2_cfjhg")
 script = ExtResource("2_4587v")
+
+[node name="VegetableTexture" parent="." index="2"]
+layout_mode = 0
+texture = ExtResource("2_cfjhg")
