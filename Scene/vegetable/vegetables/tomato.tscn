@@ -9,4 +9,5 @@ offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("3_q8idc")
 script = ExtResource("2_47oun")
+price = 3
 stat_catastrophe = [2, 0, 0, 0]
