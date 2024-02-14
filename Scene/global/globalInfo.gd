@@ -31,3 +31,12 @@ var coin : int = 10:
 		
 #global stats for the grid
 var global_stats : Array = [0, 0, 0, 0]
+
+#day système
+signal changeDay
+var dayCount : int = 0:
+	set(value):
+		dayCount = value
+		changeDay.emit()
+
+signal planted
