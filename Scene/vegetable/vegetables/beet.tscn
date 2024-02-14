@@ -7,6 +7,6 @@
 [node name="beet" instance=ExtResource("1_14mw8")]
 script = ExtResource("2_satfg")
 
-[node name="VegetableTexture" parent="." index="2"]
+[node name="VegetableTexture" parent="." index="1"]
 layout_mode = 0
 texture = ExtResource("2_nt01s")
