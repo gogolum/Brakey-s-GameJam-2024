@@ -1,10 +1,13 @@
 extends Vegetable
+func _ready():
+	stat_catastrophe = [1,2,3,4]
+	pass
 
 func effect(adjacent : Array):
-	new_stat_catastrophe = stat_catastrophe
+	var new_stat_catastrophe : Array = stat_catastrophe.duplicate()
 	for element in adjacent:
-		if element == null:
+		if element == []:
 			new_stat_catastrophe[3] += 2
-			pass
-		pass
-	pass
+
+
+
