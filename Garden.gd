@@ -72,7 +72,16 @@ func grid_update():
 				control_list[i][j] = slot_child[0]
 			else :
 				control_list[i][j] = []
-	print(control_list)
+	
+	#change effects for all the plants in the garden
+	for i in range(len(control_list)):
+		for j in range(len(control_list[0])):
+			
+			var garden_vegetable = control_list[i][j]
+			
+			#check if current slot isn't empty
+			if garden_vegetable != []:
+				garden_vegetable.effect(get_adjacent_tiles(Vector2(i,j)))
 	
 
 func _ready():
