@@ -5,6 +5,7 @@ class_name  Vegetable
 
 @export var type : String
 @export var price: int 
+@export var sell_price: int 
 
 @export var stat_catastrophe : Array = [0,0,0,0] #0 = tramblement de terre; 1 = incendi; 2 = tornade ; 3 = tsunami
 var new_stat_catastrophe : Array

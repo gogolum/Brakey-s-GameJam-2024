@@ -1,6 +1,5 @@
 extends Control
 @onready var banner = $CanvasLayer2/Banner
-@onready var timer = $Timer
 
 func _process(delta):
 	print(GlobalInfo.hoovered_vegetable)

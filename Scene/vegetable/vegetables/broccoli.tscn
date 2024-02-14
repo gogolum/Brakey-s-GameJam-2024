@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://t3ap433x082t"]
 
 [ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_uj6ht"]
-[ext_resource type="Texture2D" uid="uid://bmx73e3mvpe43" path="res://Assets/Legume_sprite/Fruits and Vegetables/Onion White.png" id="2_1pjck"]
+[ext_resource type="Texture2D" uid="uid://nyw6pr1cusds" path="res://Assets/Legume_sprite/Fruits and Vegetables/Broccoli.png" id="2_ku4q4"]
 [ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/broccoli.gd" id="2_u8ory"]
 
 [node name="broccoli" instance=ExtResource("1_uj6ht")]
-texture = ExtResource("2_1pjck")
+texture = ExtResource("2_ku4q4")
 script = ExtResource("2_u8ory")
 vegetable_name = "broccoli"
 type = "sun"
