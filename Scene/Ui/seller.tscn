@@ -38,6 +38,7 @@ to sell"
 label_settings = ExtResource("2_x75ey")
 
 [node name="piece" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 154.0
 offset_top = 29.0
 offset_right = 194.0
@@ -46,6 +47,7 @@ scale = Vector2(1.1, 1.1)
 texture = SubResource("AtlasTexture_twcok")
 
 [node name="price" type="Label" parent="."]
+layout_mode = 0
 offset_left = 167.0
 offset_top = 35.0
 offset_right = 207.0
