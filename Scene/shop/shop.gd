@@ -9,6 +9,7 @@ func regenerate_shop():
 	#variable to hold all of the shop slots
 	var shop_slots = []
 	for element in $ShopList.get_children():
+		element.get_node('SoldIcon').hide()
 		shop_slots.append(element.get_node("Marker2D").get_child(0))
 	
 	#get the global dictionnary with all vegetables set a list with all the names
