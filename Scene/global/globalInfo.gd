@@ -31,3 +31,10 @@ var coin : int = 10:
 		
 #global stats for the grid
 var global_stats : Array = [0, 0, 0, 0]
+
+var global_stat_icons : Dictionary = {
+	"EARTHQUAKE" : preload("res://Assets/icon/earthIcon.png"),
+	"FIRE" : preload("res://Assets/door/fireIcon_resized.png"),
+	"TORNADO" : preload("res://Assets/icon/tornadoIcon.png"),
+	"TSUNAMI" : preload("res://Assets/icon/tsunamiIcon.png")
+}
