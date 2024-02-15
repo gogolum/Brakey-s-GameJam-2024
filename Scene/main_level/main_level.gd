@@ -26,11 +26,11 @@ func _on_button_pressed():
 	if GlobalInfo.dayCount == 8:
 		var bossScene = BOSS_ANIMATION.instantiate()
 		$FightScene.add_child(bossScene)
-		bossScene.new_layout.generate_monster_stats(1)
+		GlobalInfo.global_boss_stats_data = bossScene.new_layout.generate_monster_stats(1)
 		bossScene.fight()
 		
 		GlobalInfo.global_boss_stats_textures = door.generate_order()
-		GlobalInfo.global_boss_stats_data = door.generate_monster_stats(0)
+		print(GlobalInfo.global_boss_stats_data)
 		door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
 		
 		GlobalInfo.dayCount = 1

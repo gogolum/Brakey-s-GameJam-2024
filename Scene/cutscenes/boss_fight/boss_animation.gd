@@ -42,7 +42,6 @@ func _ready():
 	change_life(100)
 
 func _process(delta):
-	
 	if Input.is_action_just_pressed("skipScene"):
 		next_phase.emit()
 
@@ -114,8 +113,8 @@ func fight():
 		
 		stat_label_container.hide()
 		result_of_fight_container.show()
-		
-		var result_of_fight = compare(GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]], GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]])
+		print(GlobalInfo.global_monster_stats)
+		var result_of_fight = GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]] - GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]]
 		result_label.text = str(result_of_fight)
 		
 		if result_of_fight > 0 :

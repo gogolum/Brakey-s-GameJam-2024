@@ -52,7 +52,7 @@ func generate_monster_stats(appocalipse_day):
 	var final_monster_stats = []
 	
 	for i in range(len(base_monster_stats)):
-		final_monster_stats.append(int(float(randi_range(base_monster_stats[i][0], base_monster_stats[i][1])) * coefficient))
+		final_monster_stats.append(int(float(randi_range(base_monster_stats[i][0], base_monster_stats[i][1])) * coefficient * 2))
 	
 	GlobalInfo.global_monster_stats = {}
 	var texture_list = GlobalInfo.global_boss_stats_textures
