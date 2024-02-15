@@ -3,7 +3,6 @@ extends Control
 @onready var shop = $CanvasLayer2/Shop
 @onready var day_counter = $"CanvasLayer2/NextDayButton/day counter"
 const BOSS_ANIMATION = preload("res://Scene/cutscenes/boss_fight/boss_animation.tscn")
-@onready var score = $CanvasLayer2/Score
 
 @onready var door = $CanvasLayer2/Door
 
@@ -54,8 +53,7 @@ func _on_button_pressed():
 
 
 
-
 func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
 	shop.regenerate_shop()
-	score.text = "Score: " + str(GlobalInfo.numberOfFight)
+	
