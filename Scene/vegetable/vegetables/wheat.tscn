@@ -6,6 +6,8 @@
 
 [node name="wheat" instance=ExtResource("1_3cssv")]
 script = ExtResource("2_gquxk")
+vegetable_name = "wheat"
+type = "sun"
 growing_time = 2
 
 [node name="VegetableTexture" parent="." index="1"]

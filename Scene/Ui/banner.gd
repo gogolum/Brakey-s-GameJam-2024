@@ -5,7 +5,7 @@ extends Control
 @onready var buy_value = $HBoxContainer/BuyValue
 @onready var sell_value = $HBoxContainer/SellValue
 
-@onready var growing_time_valeur = $growingTimeValeur
+@onready var growing_time_valeur = $HBoxContainer2/growingTimeValeur
 
 @onready var description_effect = $VBoxContainer/DescriptionEffect
 #stat catastrophe

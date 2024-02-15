@@ -5,11 +5,11 @@ func initialise():
 
 func effect(adjacent : Array, onDayChanged : bool):
 	if onDayChanged == true:
-		var allGood : int = 0
+		var is_empty : bool = true
 		for element in adjacent:
-			if element == []:
-				allGood += 1
-		if allGood == 4:
+			if element != []:
+				is_empty = false
+		if is_empty:
 			new_stat_catastrophe["FIRE"] += 1
 
 
