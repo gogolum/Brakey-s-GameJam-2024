@@ -113,6 +113,7 @@ func fight():
 		
 		stat_label_container.hide()
 		result_of_fight_container.show()
+    
 		var result_of_fight = GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]] - GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]]
 		result_label.text = str(result_of_fight)
 		
@@ -129,4 +130,5 @@ func fight():
 	$CanvasLayer.queue_free()
 	await next_phase
 	GlobalInfo.numberOfFight += 1
+	get_parent().get_parent().get_node("CanvasLayer2").show()
 	queue_free()

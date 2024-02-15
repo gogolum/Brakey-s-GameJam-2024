@@ -62,6 +62,9 @@ var isbought : bool = false
 func _process(_delta):
 	if picked_up:
 		global_position = get_global_mouse_position()
+		z_index = 2
+	else :
+		z_index = 1
 	
 	if Input.is_action_just_released("LeftClick"):
 		mouse_released.emit()
@@ -77,16 +80,24 @@ func _on_drag_button_pressed():
 		picked_up = false
 		
 		if GlobalInfo.hoovered_plot and GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').get_children() == []:
+			
 			var vegetable = self
+			var vegetable_parent = get_parent()
+			var sold_icon_parent = vegetable_parent.get_parent().get_parent().get_node("SoldIcon")
+			sold_icon_parent.show()
 			get_parent().remove_child(vegetable)
 			GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').add_child(vegetable)
 			vegetable.global_position = get_parent().get_parent().get_node('SlotSnappingPoint').global_position
+			
 			isbought = true
-			grown_state()
 			GlobalInfo.coin -= vegetable.price
+			var bought_icon = 0
+			grown_state()
+			
 			#envoie l'info au jardin qu'un légume a été planté
 			GlobalInfo.planted.emit()
 			$DragTimer.start()
+			
 	if isbought and $DragTimer.is_stopped() and current_growState >= growing_time:
 		var vegetable = self
 		picked_up = true
@@ -94,6 +105,8 @@ func _on_drag_button_pressed():
 			#vegetable.modulate 
 		await mouse_released
 		picked_up = false
+		vegetable.global_position = get_parent().global_position
+		
 		if GlobalInfo.canSell == true:
 			vegetable.queue_free()
 			GlobalInfo.coin += sell_price
