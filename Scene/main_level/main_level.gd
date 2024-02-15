@@ -46,9 +46,6 @@ func _on_button_pressed():
 		door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
 		
 		GlobalInfo.dayCount = 1
-		GlobalInfo.numberOfFight += 1
-
-		score.text = "Score: " + str(GlobalInfo.numberOfFight)
 
 		day_counter.text = str(GlobalInfo.dayCount) + " day"
 
@@ -58,4 +55,3 @@ func _on_button_pressed():
 func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
 	shop.regenerate_shop()
-	score.text = "Score: " + str(GlobalInfo.numberOfFight)
