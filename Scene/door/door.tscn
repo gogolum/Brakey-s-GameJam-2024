@@ -158,7 +158,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lixmr")
 }
 
-[node name="UI" type="Control" parent="."]
+[node name="NextAttacks" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -166,14 +166,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="UI"]
+[node name="PanelContainer" type="PanelContainer" parent="NextAttacks"]
 layout_mode = 0
 offset_left = -103.0
 offset_top = 21.0
 offset_right = 94.0
 offset_bottom = 120.0
 
-[node name="Label" type="Label" parent="UI"]
+[node name="Label" type="Label" parent="NextAttacks"]
 layout_mode = 2
 offset_left = -101.25
 offset_top = 23.125
@@ -185,7 +185,7 @@ attacks:"
 label_settings = ExtResource("8_mkxin")
 horizontal_alignment = 1
 
-[node name="MainIconRect" type="PanelContainer" parent="UI"]
+[node name="MainIconRect" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 28.0
@@ -193,12 +193,12 @@ offset_top = 76.0
 offset_right = 68.0
 offset_bottom = 116.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/MainIconRect"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/MainIconRect"]
 layout_mode = 2
 texture = ExtResource("3_5u07l")
 expand_mode = 3
 
-[node name="SecondaryIconRect" type="PanelContainer" parent="UI"]
+[node name="SecondaryIconRect" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -28.0
@@ -206,12 +206,12 @@ offset_top = 80.0
 offset_right = 4.0
 offset_bottom = 112.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/SecondaryIconRect"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/SecondaryIconRect"]
 layout_mode = 2
 texture = ExtResource("4_sqayh")
 expand_mode = 3
 
-[node name="SubIconRect2" type="PanelContainer" parent="UI"]
+[node name="SubIconRect2" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -68.0
@@ -219,12 +219,12 @@ offset_top = 80.0
 offset_right = -52.0
 offset_bottom = 96.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/SubIconRect2"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/SubIconRect2"]
 layout_mode = 2
 texture = ExtResource("5_ca5yq")
 expand_mode = 3
 
-[node name="SubIconRect" type="PanelContainer" parent="UI"]
+[node name="SubIconRect" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -68.0
@@ -232,12 +232,12 @@ offset_top = 96.0
 offset_right = -52.0
 offset_bottom = 112.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/SubIconRect"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/SubIconRect"]
 layout_mode = 2
 texture = ExtResource("6_b46bg")
 expand_mode = 3
 
-[node name="Greaterthansign" type="PanelContainer" parent="UI"]
+[node name="Greaterthansign" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -48.0
@@ -245,11 +245,11 @@ offset_top = 88.0
 offset_right = -28.0
 offset_bottom = 108.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/Greaterthansign"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/Greaterthansign"]
 layout_mode = 2
 texture = ExtResource("7_gq0tn")
 
-[node name="Greaterthansign2" type="PanelContainer" parent="UI"]
+[node name="Greaterthansign2" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 8.0
@@ -257,6 +257,6 @@ offset_top = 88.0
 offset_right = 28.0
 offset_bottom = 108.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/Greaterthansign2"]
+[node name="TextureRect" type="TextureRect" parent="NextAttacks/Greaterthansign2"]
 layout_mode = 2
 texture = ExtResource("7_gq0tn")
