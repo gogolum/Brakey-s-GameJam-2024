@@ -5,8 +5,9 @@ func initialise():
 	pass
 	
 func effect(adjacent : Array, onDayChanged : bool):
-	var new_stat : Array = stat_catastrophe.duplicate()
+	var new_stat : Dictionary = stat_catastrophe.duplicate()
 	for element in adjacent:
-		
-		pass
+		if element.type == "sun":
+			new_stat["FIRE"] += 1
+			pass
 	new_stat_catastrophe = new_stat
