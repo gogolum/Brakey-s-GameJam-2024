@@ -108,6 +108,7 @@ func grown_state():
 			vegetable_texture.visible = false
 			growth_progress_bar.show()
 			growth_progress_bar.value = current_growState
+			growth_progress_bar.max_value = growing_time
 			growth_progress_bar.get_child(1).texture = vegetable_texture.texture
 		else :
 			growth_progress_bar.hide()
@@ -119,5 +120,4 @@ func grown_state():
 		sprout_texture.hide()
 
 func isGrown():
-	
 	return current_growState >= growing_time

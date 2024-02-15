@@ -9,7 +9,7 @@ script = ExtResource("2_47oun")
 vegetable_name = "tomato"
 type = "sun"
 price = 8
-sell_price = 19
+sell_price = 16
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 0,

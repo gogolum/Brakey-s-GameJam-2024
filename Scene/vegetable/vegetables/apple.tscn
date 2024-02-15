@@ -7,8 +7,9 @@
 [node name="apple" instance=ExtResource("1_b33ph")]
 script = ExtResource("2_lveld")
 vegetable_name = "apple"
-type = "sun"
+type = "fruit"
 price = 3
+sell_price = 6
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 1,

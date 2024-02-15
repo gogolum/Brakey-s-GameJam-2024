@@ -6,6 +6,18 @@
 
 [node name="cherry" instance=ExtResource("1_1gni1")]
 script = ExtResource("2_hap7w")
+vegetable_name = "cherry"
+type = "fruit"
+price = 18
+sell_price = 32
+stat_catastrophe = {
+"EARTHQUAKE": 0,
+"FIRE": 0,
+"TORNADO": 0,
+"TSUNAMI": 2
+}
+effect_description = "gain 6 tornado for each adjacent wheat"
+growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_omecu")
