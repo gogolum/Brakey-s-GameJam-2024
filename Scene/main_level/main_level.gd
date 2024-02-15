@@ -37,7 +37,7 @@ func _on_button_pressed():
 		$CanvasLayer2.hide()
 		var bossScene = BOSS_ANIMATION.instantiate()
 		$FightScene.add_child(bossScene)
-		GlobalInfo.global_boss_stats_data = bossScene.new_layout.generate_monster_stats(1)
+		GlobalInfo.global_boss_stats_data = bossScene.new_layout.generate_monster_stats(GlobalInfo.numberOfFight)
 		bossScene.fight()
 		
 		GlobalInfo.global_boss_stats_textures = door.generate_order()
