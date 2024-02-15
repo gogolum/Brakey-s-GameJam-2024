@@ -7,31 +7,37 @@ extends Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	generate_monster_stats(1)
+	print(GlobalInfo.global_monster_stats)
 	
 func generate_order():
 	
 	var icon_dict = GlobalInfo.global_stat_icons
-	var icon_names : Array = []
-	var final_textures : Array = []
-	
-	#get every name of every stat
-	for element in icon_dict:
-		icon_names.append(element)
+	var icon_names = GlobalInfo.global_stat_icons_name
+	var final_textures : Dictionary = {}
 	
 	#shuffle the list to randomize it
 	icon_names.shuffle()
 	
 	for i in range(len(icon_names)):
-		final_textures.append(icon_dict[icon_names[i]])
+		final_textures[icon_names[i]] = icon_dict[icon_names[i]]
+		
+	apply_next_fight_textures(final_textures)
 	
 	return final_textures
 
-func apply_next_fight_textures(textures : Array):
-	main_icon_rect.texture = textures[0]
-	secondary_icon_rect = textures[1]
-	sub_icon_rect_2 = textures[2]
-	sub_icon_rect = textures[3]
+func apply_next_fight_textures(textures : Dictionary):
+	
+	#texture list
+	var texture_list = []
+	
+	for element in textures:
+		texture_list.append(textures[element])
+	
+	main_icon_rect.get_node("TextureRect").texture = texture_list[0]
+	secondary_icon_rect.get_node("TextureRect").texture = texture_list[1]
+	sub_icon_rect_2.get_node("TextureRect").texture = texture_list[2]
+	sub_icon_rect.get_node("TextureRect").texture = texture_list[3]
 	
 func generate_monster_stats(appocalipse_day):
 	
@@ -48,5 +54,23 @@ func generate_monster_stats(appocalipse_day):
 	for i in range(len(base_monster_stats)):
 		final_monster_stats.append(int(float(randi_range(base_monster_stats[i][0], base_monster_stats[i][1])) * coefficient))
 	
-	return final_monster_stats
+	GlobalInfo.global_monster_stats = {}
+	var texture_list = generate_order()
+	var list_incrementation = 0
+	for element in texture_list:
+		GlobalInfo.global_monster_stats[element] = final_monster_stats[list_incrementation]
+		list_incrementation += 1
 	
+	#creation of an array to reverse the dict
+	var reversed_list = []
+	var reversed_dict = {}
+	for element in GlobalInfo.global_monster_stats:
+		reversed_list.append(element)
+	reversed_list.reverse()
+	for element in reversed_list :
+		reversed_dict[element] = GlobalInfo.global_monster_stats[element]
+	
+	GlobalInfo.global_monster_stats = reversed_dict
+	
+func get_stat_dictionnary():
+	pass

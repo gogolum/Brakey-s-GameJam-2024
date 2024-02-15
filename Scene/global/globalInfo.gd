@@ -39,6 +39,9 @@ var global_stat_icons : Dictionary = {
 	"TSUNAMI" : preload("res://Assets/icon/tsunamiIcon.png")
 }
 
+var global_stat_icons_name : Array = ["EARTHQUAKE", "FIRE", "TORNADO", "TSUNAMI"]
+
+var global_monster_stats : Dictionary
 #day système
 signal changeDay
 var dayCount : int = 0:
