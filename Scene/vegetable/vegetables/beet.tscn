@@ -8,5 +8,4 @@
 script = ExtResource("2_satfg")
 
 [node name="VegetableTexture" parent="." index="1"]
-layout_mode = 0
 texture = ExtResource("2_nt01s")

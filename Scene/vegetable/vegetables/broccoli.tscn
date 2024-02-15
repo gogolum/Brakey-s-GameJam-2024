@@ -14,5 +14,4 @@ effect_description = "gain 3 tsunami for each fruit and sun plant"
 growing_time = 6
 
 [node name="VegetableTexture" parent="." index="1"]
-layout_mode = 0
 texture = ExtResource("2_ku4q4")

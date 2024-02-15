@@ -14,5 +14,4 @@ effect_description = "gain 2 tsunami for each empty adjacent tile "
 growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]
-layout_mode = 0
 texture = ExtResource("2_miw3v")
