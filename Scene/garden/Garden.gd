@@ -101,6 +101,7 @@ func grid_update(onDayChanged : bool):
 				if onDayChanged ==  true:
 					#les plantes pousses
 					garden_vegetable[0].current_growState += 1
+					
 				if garden_vegetable[0].isGrown():
 					for element in total_stat:
 						total_stat[element] += garden_vegetable[0].new_stat_catastrophe[element]

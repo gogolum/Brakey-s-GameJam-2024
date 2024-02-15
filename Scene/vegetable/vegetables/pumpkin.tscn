@@ -6,7 +6,18 @@
 
 [node name="pumpkin" instance=ExtResource("1_h0ypo")]
 script = ExtResource("2_wrecj")
+vegetable_name = "pumpkin"
+type = "sun"
+price = 25
+sell_price = 50
+stat_catastrophe = {
+"EARTHQUAKE": 10,
+"FIRE": 10,
+"TORNADO": 10,
+"TSUNAMI": 10
+}
+effect_description = ""
+growing_time = 7
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_sumbu")

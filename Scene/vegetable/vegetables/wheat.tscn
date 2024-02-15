@@ -8,7 +8,9 @@
 script = ExtResource("2_gquxk")
 vegetable_name = "wheat"
 type = "sun"
-growing_time = 2
+price = 6
+sell_price = 10
+growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_phfr7")
