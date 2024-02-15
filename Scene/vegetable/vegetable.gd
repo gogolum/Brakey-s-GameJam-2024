@@ -11,7 +11,7 @@ class_name  Vegetable
 @export var sell_price: int 
 
 @export var stat_catastrophe : Array = [0,0,0,0] #0 = tramblement de terre; 1 = incendi; 2 = tornade ; 3 = tsunami
-var new_stat_catastrophe : Array
+var new_stat_catastrophe : Array = stat_catastrophe
 
 @export var effect_description : String = "je donne 1 point de ..."
 
@@ -67,7 +67,7 @@ func _on_drag_button_pressed():
 			isbought = true
 			grown_state()
 			GlobalInfo.coin -= vegetable.price
-			
+			GlobalInfo.planted.emit()
 func destroy():
 	queue_free()
 

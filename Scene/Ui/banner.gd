@@ -23,8 +23,8 @@ func setBanner(vegetable : Vegetable):
 	growing_time_valeur.text = str(vegetable.growing_time)
 	description_effect.text = str(vegetable.effect_description)
 	#stat
-	earthquake_value.text = str(vegetable.stat_catastrophe[0])
-	firevalue.text = str(vegetable.stat_catastrophe[1])
-	tornado_value.text = str(vegetable.stat_catastrophe[2])
-	tsunami_value.text = str(vegetable.stat_catastrophe[3])
+	earthquake_value.text = str(vegetable.new_stat_catastrophe[0])
+	firevalue.text = str(vegetable.new_stat_catastrophe[1])
+	tornado_value.text = str(vegetable.new_stat_catastrophe[2])
+	tsunami_value.text = str(vegetable.new_stat_catastrophe[3])
 	

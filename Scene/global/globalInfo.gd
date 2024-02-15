@@ -38,3 +38,12 @@ var global_stat_icons : Dictionary = {
 	"TORNADO" : preload("res://Assets/icon/tornadoIcon.png"),
 	"TSUNAMI" : preload("res://Assets/icon/tsunamiIcon.png")
 }
+
+#day système
+signal changeDay
+var dayCount : int = 0:
+	set(value):
+		dayCount = value
+		changeDay.emit()
+
+signal planted

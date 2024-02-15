@@ -56,7 +56,7 @@ func get_adjacent_tiles(coordinates : Vector2):
 		
 	return new_coords
 
-func grid_update():
+func grid_update(onDayChanged : bool):
 	
 	#go through all rows and columns via control list
 	for i in range(len(control_list)):
@@ -91,6 +91,8 @@ func grid_update():
 			
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
+				if onDayChanged ==  true:
+					garden_vegetable[0].current_growState +=1
 				if garden_vegetable[0].current_growState >= garden_vegetable[0].growing_time:
 					for k in range(4):
 						total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
@@ -112,7 +114,11 @@ func grid_update():
 	tsunami_label.text = str(global_stats[3])	
 
 func _ready():
-	generate_grid(grid_rows, grid_columns)
-	
-func _process(delta):
-	grid_update()
+	generate_grid(grid_rows, grid_columns) 
+	GlobalInfo.changeDay.connect(changeDay)
+	GlobalInfo.planted.connect(grid_update.bind(false))
+
+func changeDay():
+	grid_update(true)
+	pass
+
