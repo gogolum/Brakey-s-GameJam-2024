@@ -1,9 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://5w2uckepo61b"]
+[gd_scene load_steps=23 format=3 uid="uid://5w2uckepo61b"]
 
 [ext_resource type="Script" path="res://Scene/cutscenes/boss_fight/boss_animation.gd" id="1_puylk"]
 [ext_resource type="Texture2D" uid="uid://obdjvagmko35" path="res://Assets/door/!Demon Door.png" id="2_eg5gg"]
 [ext_resource type="Texture2D" uid="uid://054byy2ohkpx" path="res://Assets/lifebar_door.png" id="3_mc8as"]
 [ext_resource type="Texture2D" uid="uid://cridojsih5lgk" path="res://Assets/lifebar_door_filled.png" id="4_wsegs"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="5_74ngf"]
+[ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="5_ntr0q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntf6a"]
 atlas = ExtResource("2_eg5gg")
@@ -139,6 +141,20 @@ _data = {
 "RESET": SubResource("Animation_awu60")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_80vnn"]
+font = ExtResource("5_ntr0q")
+font_size = 80
+font_color = Color(0, 0.831373, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p0imv"]
+font = ExtResource("5_ntr0q")
+font_size = 80
+font_color = Color(0.94902, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pcgg4"]
+font = ExtResource("5_ntr0q")
+font_size = 80
+
 [node name="BossAnimation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -173,15 +189,13 @@ libraries = {
 position = Vector2(352, 392)
 scale = Vector2(2, 2)
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 128.0
-offset_top = 384.0
-offset_right = 220.0
-offset_bottom = 415.0
-scale = Vector2(3, 3)
-text = "Next Stage"
+[node name="LifeBar" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DoorLifeBar" type="TextureProgressBar" parent="CanvasLayer"]
+[node name="DoorLifeBar" type="TextureProgressBar" parent="CanvasLayer/LifeBar"]
 offset_left = 320.0
 offset_top = 448.0
 offset_right = 384.0
@@ -190,6 +204,14 @@ scale = Vector2(10, 10)
 value = 10.0
 texture_over = ExtResource("3_mc8as")
 texture_progress = ExtResource("4_wsegs")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 220.0
+offset_bottom = 415.0
+scale = Vector2(3, 3)
+text = "Next Stage"
 
 [node name="Button2" type="Button" parent="CanvasLayer"]
 offset_left = 132.0
@@ -207,5 +229,43 @@ offset_bottom = 195.0
 scale = Vector2(3, 3)
 text = "Start fight"
 
+[node name="StatLabelContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 176.0
+offset_top = 48.0
+offset_right = 1104.0
+offset_bottom = 172.0
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="PlayerStatLabel" type="Label" parent="CanvasLayer/StatLabelContainer"]
+layout_mode = 2
+text = "13"
+label_settings = SubResource("LabelSettings_80vnn")
+
+[node name="VSLabel" type="Label" parent="CanvasLayer/StatLabelContainer"]
+layout_mode = 2
+text = "VS"
+label_settings = ExtResource("5_74ngf")
+
+[node name="MonsterStatLabel" type="Label" parent="CanvasLayer/StatLabelContainer"]
+layout_mode = 2
+text = "18"
+label_settings = SubResource("LabelSettings_p0imv")
+
+[node name="ResultOfFightContainer" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 176.0
+offset_top = 48.0
+offset_right = 1104.0
+offset_bottom = 172.0
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultOfFightContainer"]
+layout_mode = 2
+text = "-14"
+label_settings = SubResource("LabelSettings_pcgg4")
+
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
 [connection signal="button_up" from="CanvasLayer/Button3" to="." method="_on_button_3_button_up"]

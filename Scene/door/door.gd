@@ -74,3 +74,6 @@ func generate_monster_stats(appocalipse_day):
 	
 func get_stat_dictionnary():
 	pass
+
+func _ready():
+	generate_monster_stats(0)
