@@ -7,6 +7,5 @@
 [node name="cherry" instance=ExtResource("1_1gni1")]
 script = ExtResource("2_hap7w")
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_omecu")

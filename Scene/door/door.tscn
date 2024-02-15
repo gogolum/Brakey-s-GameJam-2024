@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://j624qows4ax5" path="res://Assets/icon/tornadoIcon.png" id="5_ca5yq"]
 [ext_resource type="Texture2D" uid="uid://biuitxcerchkh" path="res://Assets/icon/tsunamiIcon.png" id="6_b46bg"]
 [ext_resource type="Texture2D" uid="uid://bvngbqdav74v8" path="res://Assets/door/greatterthan.png" id="7_gq0tn"]
-[ext_resource type="LabelSettings" path="res://Scene/Ui/policeLabel.tres" id="8_mkxin"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="8_mkxin"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xsik"]
 bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0)
@@ -149,6 +149,7 @@ expand_mode = 3
 
 [node name="Panel" type="Panel" parent="NextAttacks/SubIconRect"]
 visible = false
+layout_mode = 0
 offset_left = -2.51001
 offset_top = -2.5
 offset_right = 20.49

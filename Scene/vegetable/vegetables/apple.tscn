@@ -7,6 +7,5 @@
 [node name="apple" instance=ExtResource("1_b33ph")]
 script = ExtResource("2_lveld")
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_eafha")

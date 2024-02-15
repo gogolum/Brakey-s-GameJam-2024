@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://w8v2eba32ld6"]
+[gd_scene load_steps=6 format=3 uid="uid://w8v2eba32ld6"]
 
 [ext_resource type="Script" path="res://Scene/vegetable/vegetable.gd" id="1_vjb0w"]
 [ext_resource type="Texture2D" uid="uid://bqdq5nyvusqfk" path="res://Assets/Legume_sprite/sproot.png" id="2_r3qm1"]
+[ext_resource type="Texture2D" uid="uid://ppqnttw8netc" path="res://Assets/icon/circularProgressBarEmpty.png" id="3_y7d0n"]
+[ext_resource type="Texture2D" uid="uid://chn6n6jqsvopy" path="res://Assets/icon/circularProgressBarfull.png" id="4_j1s3i"]
+[ext_resource type="Texture2D" uid="uid://deb1x250uy8b5" path="res://Assets/icon/GrowBaground.png" id="5_5va8u"]
 
 [node name="Vegetable" type="TextureRect"]
 show_behind_parent = true
@@ -35,5 +38,34 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.95137, 0.951091)
 action_mode = 0
+
+[node name="GrowthProgressBar" type="TextureProgressBar" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 26.0
+offset_bottom = 26.0
+scale = Vector2(0.7, 0.7)
+value = 28.0
+fill_mode = 4
+texture_over = ExtResource("3_y7d0n")
+texture_progress = ExtResource("4_j1s3i")
+
+[node name="bulle" type="TextureRect" parent="GrowthProgressBar"]
+z_index = -1
+layout_mode = 0
+offset_left = -4.28571
+offset_top = -4.28571
+offset_right = 35.7143
+offset_bottom = 35.7143
+texture = ExtResource("5_5va8u")
+
+[node name="VegetableIcon" type="TextureRect" parent="GrowthProgressBar"]
+offset_left = 7.14286
+offset_top = 7.14286
+offset_right = 47.1429
+offset_bottom = 47.1429
+scale = Vector2(0.46, 0.46)
 
 [connection signal="pressed" from="DragButton" to="." method="_on_drag_button_pressed"]

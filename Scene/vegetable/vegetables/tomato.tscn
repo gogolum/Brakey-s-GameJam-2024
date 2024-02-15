@@ -10,3 +10,6 @@ price = 3
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("3_q8idc")
+
+[node name="VegetableIcon" parent="TextureProgressBar" index="1"]
+layout_mode = 0
