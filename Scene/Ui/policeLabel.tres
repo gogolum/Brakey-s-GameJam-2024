@@ -6,3 +6,4 @@
 font = ExtResource("1_pk1je")
 font_size = 80
 font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
