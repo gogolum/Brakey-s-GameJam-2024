@@ -9,13 +9,13 @@ var vegetables : Dictionary = {
 	'POTATO' : preload("res://Scene/vegetable/vegetables/potato.tscn"),
 	#'ONION' : preload("res://Scene/vegetable/vegetables/onion.tscn"),
 	'MANGO' : preload("res://Scene/vegetable/vegetables/mango.tscn"),
-	#'LETTUCE' : preload("res://Scene/vegetable/vegetables/lettuce.tscn"),
-	#'JALAPENO' : preload("res://Scene/vegetable/vegetables/jalapeno.tscn"),
+	'LETTUCE' : preload("res://Scene/vegetable/vegetables/lettuce.tscn"),
+	'JALAPENO' : preload("res://Scene/vegetable/vegetables/jalapeno.tscn"),
 	'GRAPES' : preload("res://Scene/vegetable/vegetables/grapes.tscn"),
 	'CHERRY' : preload("res://Scene/vegetable/vegetables/cherry.tscn"),
-	#'BROCCOLI' : preload("res://Scene/vegetable/vegetables/broccoli.tscn"),
+	'BROCCOLI' : preload("res://Scene/vegetable/vegetables/broccoli.tscn"),
 	#'BEET' : preload("res://Scene/vegetable/vegetables/beet.tscn"),
-	#'BANANA' : preload("res://Scene/vegetable/vegetables/banana.tscn"),
+	'BANANA' : preload("res://Scene/vegetable/vegetables/banana.tscn"),
 	'APPLE' : preload("res://Scene/vegetable/vegetables/apple.tscn")
 }
 
@@ -58,7 +58,9 @@ var dayCount : int = 1:
 		dayCount = value
 		changeDay.emit()
 
+#permet d'update la grid
 signal planted
+signal growed
 #systeme de vente de plante
 var canSell
 

@@ -8,8 +8,14 @@
 script = ExtResource("2_u8ory")
 vegetable_name = "broccoli"
 type = "sun"
-price = 9
-stat_catastrophe = [0, 2, 0, 0]
+price = 10
+sell_price = 20
+stat_catastrophe = {
+"EARTHQUAKE": 0,
+"FIRE": 2,
+"TORNADO": 0,
+"TSUNAMI": 0
+}
 effect_description = "gain 3 tsunami for each fruit and sun plant"
 growing_time = 6
 

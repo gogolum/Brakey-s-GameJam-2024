@@ -1,13 +1,14 @@
 extends Vegetable
 
-func _ready():
-	stat_catastrophe = [0,2,0,0]
-
-func effect(adjacent : Array):
-	var new_stat_catastrophe : Array = stat_catastrophe.duplicate()
+func initialise():
+	pass
+	
+func effect(adjacent : Array, onDayChanged : bool):
+	var new_stat : Dictionary = stat_catastrophe.duplicate()
 	for element in adjacent:
 		if element != []:
-			if element[0].type == "sun" or element[0].type == "fruit":
-				new_stat_catastrophe[3] += 3
-
+			if element[0].type == "sun" or element[0].type == "underground" and element[0].isGrown():
+				new_stat["TSUNAMI"] += 3
+				pass
+	new_stat_catastrophe = new_stat
 

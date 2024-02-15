@@ -6,7 +6,17 @@
 
 [node name="jalapeno" instance=ExtResource("1_h35s7")]
 script = ExtResource("2_0i1bg")
+vegetable_name = "jalapeno"
+type = "sun"
+price = 15
+sell_price = 36
+stat_catastrophe = {
+"EARTHQUAKE": 1,
+"FIRE": 0,
+"TORNADO": 1,
+"TSUNAMI": 0
+}
+growing_time = 10
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_laufb")
