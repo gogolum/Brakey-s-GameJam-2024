@@ -30,7 +30,6 @@ func _on_button_pressed():
 		bossScene.fight()
 		
 		GlobalInfo.global_boss_stats_textures = door.generate_order()
-		print(GlobalInfo.global_boss_stats_data)
 		door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
 		
 		GlobalInfo.dayCount = 1

@@ -113,7 +113,6 @@ func fight():
 		
 		stat_label_container.hide()
 		result_of_fight_container.show()
-		print(GlobalInfo.global_monster_stats)
 		var result_of_fight = GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]] - GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]]
 		result_label.text = str(result_of_fight)
 		
