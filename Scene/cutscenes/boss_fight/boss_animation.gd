@@ -32,6 +32,7 @@ func _ready():
 	new_layout.get_node("NextAttacks").get_node("IndicatorLabel").hide()
 	new_layout.get_node("NextAttacks").get_node("PanelContainer").hide()
 	boss_attacks_display.add_child(new_layout)
+	new_layout.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
 	
 	#hide all the fights variable
 	stat_label_container.hide()
@@ -95,12 +96,13 @@ func compare(player_stat, boss_stat):
 
 func fight():
 	
+	#make list to hold all the catastrophies in order
+	var catastrophies_list = []
+	
+	for element in GlobalInfo.global_monster_stats:
+		catastrophies_list.append(element)
+
 	for boss_fight_stage in range(4):
-		#make list to hold all the catastrophies in order
-		var catastrophies_list = []
-		
-		for element in GlobalInfo.global_monster_stats:
-			catastrophies_list.append(element)
 		
 		update_attacks_display_slots(boss_fight_stage)
 		
