@@ -371,10 +371,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -227.0
-offset_top = -230.0
-offset_right = -97.0
-offset_bottom = -100.0
+offset_left = -224.0
+offset_top = -213.0
+offset_right = -94.0
+offset_bottom = -83.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -502,3 +502,21 @@ custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ifk7c")
 autowrap_mode = 2
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 152.0
+offset_right = 1821.0
+offset_bottom = 232.0
+scale = Vector2(0.24, 0.24)
+
+[node name="Type" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Type: "
+label_settings = SubResource("LabelSettings_ifk7c")
+
+[node name="Typevalue" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "underground"
+label_settings = SubResource("LabelSettings_ifk7c")

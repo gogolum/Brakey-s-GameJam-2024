@@ -81,8 +81,8 @@ func grid_update(onDayChanged : bool):
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
 				#garden_vegetable[0].grown_state()
-				garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)))
-
+				garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)),onDayChanged)
+	
 	var total_stat = [0, 0, 0, 0]
 	for i in range(len(control_list)):
 		for j in range(len(control_list[0])):
@@ -91,8 +91,10 @@ func grid_update(onDayChanged : bool):
 			
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
+				#check if the day update is on a day change
 				if onDayChanged ==  true:
-					garden_vegetable[0].current_growState +=1
+					#les plantes pousses
+					garden_vegetable[0].current_growState += 1
 				if garden_vegetable[0].current_growState >= garden_vegetable[0].growing_time:
 					for k in range(4):
 						total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
@@ -107,7 +109,7 @@ func grid_update(onDayChanged : bool):
 	var fire_label = stat_display_node.get_node("FireValue")
 	var tornado_label = stat_display_node.get_node("TornadoValue")
 	var tsunami_label = stat_display_node.get_node("TsunamiValue")
-
+	
 	earthquake_label.text = str(global_stats[0])
 	fire_label.text = str(global_stats[1])
 	tornado_label.text = str(global_stats[2])
@@ -115,10 +117,10 @@ func grid_update(onDayChanged : bool):
 
 func _ready():
 	generate_grid(grid_rows, grid_columns) 
-	GlobalInfo.changeDay.connect(changeDay)
+	GlobalInfo.changeDay.connect(grid_update.bind(true))
 	GlobalInfo.planted.connect(grid_update.bind(false))
 
-func changeDay():
-	grid_update(true)
-	pass
+#func changeDay():
+	#grid_update(true)
+	#pass
 

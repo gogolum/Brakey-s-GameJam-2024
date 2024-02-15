@@ -6,7 +6,7 @@
 
 [node name="wheat" instance=ExtResource("1_3cssv")]
 script = ExtResource("2_gquxk")
+growing_time = 2
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_phfr7")

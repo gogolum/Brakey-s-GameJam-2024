@@ -8,12 +8,13 @@ extends Control
 @onready var growing_time_valeur = $growingTimeValeur
 
 @onready var description_effect = $VBoxContainer/DescriptionEffect
-
+#stat catastrophe
 @onready var earthquake_value = $desasterStatHolder/HBoxContainer/earthquakeValue
 @onready var firevalue = $desasterStatHolder/HBoxContainer/Firevalue
 @onready var tornado_value = $desasterStatHolder/HBoxContainer2/TornadoValue
 @onready var tsunami_value = $desasterStatHolder/HBoxContainer2/TsunamiValue
-
+#type
+@onready var typevalue = $VBoxContainer2/Typevalue
 
 
 func setBanner(vegetable : Vegetable):
@@ -27,4 +28,4 @@ func setBanner(vegetable : Vegetable):
 	firevalue.text = str(vegetable.new_stat_catastrophe[1])
 	tornado_value.text = str(vegetable.new_stat_catastrophe[2])
 	tsunami_value.text = str(vegetable.new_stat_catastrophe[3])
-	
+	typevalue.text = vegetable.type
