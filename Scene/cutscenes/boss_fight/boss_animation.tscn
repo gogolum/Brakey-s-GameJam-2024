@@ -191,4 +191,21 @@ value = 10.0
 texture_over = ExtResource("3_mc8as")
 texture_progress = ExtResource("4_wsegs")
 
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 132.0
+offset_top = 252.0
+offset_right = 217.0
+offset_bottom = 283.0
+scale = Vector2(3, 3)
+text = "New stats"
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+offset_left = 128.0
+offset_top = 164.0
+offset_right = 214.0
+offset_bottom = 195.0
+scale = Vector2(3, 3)
+text = "Start fight"
+
 [connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/Button3" to="." method="_on_button_3_button_up"]

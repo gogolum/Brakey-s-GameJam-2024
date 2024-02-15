@@ -64,7 +64,8 @@ func change_life(life_point):
 
 func compare(player_stat, boss_stat):
 	#compare_animation()
-	pass
+	return player_stat - boss_stat
+
 
 func _on_button_button_up():
 	next_phase.emit()
@@ -77,5 +78,13 @@ func fight():
 	
 	update_attacks_display_slots(boss_fight_stage)
 	await next_phase
-	compare
+	print(compare(GlobalInfo.global_monster_stats[catastrophies_list[0]], GlobalInfo.global_stats[catastrophies_list[0]]))
 	
+
+
+func _on_button_2_button_up():
+	new_layout.generate_monster_stats(2)
+
+
+func _on_button_3_button_up():
+	fight()
