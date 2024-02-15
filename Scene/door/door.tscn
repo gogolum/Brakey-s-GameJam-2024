@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://boilbg0t37mhd"]
+[gd_scene load_steps=22 format=3 uid="uid://boilbg0t37mhd"]
 
 [ext_resource type="Script" path="res://Scene/door/door.gd" id="1_6yer4"]
 [ext_resource type="Texture2D" uid="uid://obdjvagmko35" path="res://Assets/door/!Demon Door.png" id="1_xibb1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://j624qows4ax5" path="res://Assets/icon/tornadoIcon.png" id="5_ca5yq"]
 [ext_resource type="Texture2D" uid="uid://biuitxcerchkh" path="res://Assets/icon/tsunamiIcon.png" id="6_b46bg"]
 [ext_resource type="Texture2D" uid="uid://bvngbqdav74v8" path="res://Assets/door/greatterthan.png" id="7_gq0tn"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="8_mkxin"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntf6a"]
 atlas = ExtResource("1_xibb1")
@@ -144,9 +145,11 @@ _data = {
 
 [node name="Door" type="Node2D"]
 position = Vector2(96, 96)
+scale = Vector2(1.6, 1.6)
 script = ExtResource("1_6yer4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_ej88q")
 animation = &"Idle"
 
@@ -165,10 +168,22 @@ grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="UI"]
 layout_mode = 0
-offset_left = -76.0
-offset_top = 72.0
-offset_right = 76.0
+offset_left = -103.0
+offset_top = 21.0
+offset_right = 94.0
 offset_bottom = 120.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = -101.25
+offset_top = 23.125
+offset_right = 548.75
+offset_bottom = 186.125
+scale = Vector2(0.3, 0.3)
+text = "Next apocalypse 
+attacks:"
+label_settings = ExtResource("8_mkxin")
+horizontal_alignment = 1
 
 [node name="MainIconRect" type="PanelContainer" parent="UI"]
 self_modulate = Color(1, 1, 1, 0)

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://j624qows4ax5" path="res://Assets/icon/tornadoIcon.png" id="7_122tb"]
 [ext_resource type="Texture2D" uid="uid://biuitxcerchkh" path="res://Assets/icon/tsunamiIcon.png" id="8_5bweg"]
 [ext_resource type="Texture2D" uid="uid://bqdq5nyvusqfk" path="res://Assets/Legume_sprite/sproot.png" id="9_a2a6w"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="10_1ycko"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2lq5"]
 texture = ExtResource("1_lp1l5")
@@ -320,7 +321,7 @@ sources/0 = SubResource("TileSetAtlasSource_f2lq5")
 
 [sub_resource type="LabelSettings" id="LabelSettings_wku3w"]
 font = ExtResource("4_5gfm0")
-font_size = 280
+font_size = 27
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_te1qg"]
@@ -330,12 +331,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tqofs"]
 font = ExtResource("4_5gfm0")
-font_size = 40
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ifk7c"]
-font = ExtResource("4_5gfm0")
-font_size = 80
+font_size = 30
 font_color = Color(0, 0, 0, 1)
 
 [node name="Banner" type="Control"]
@@ -495,12 +491,12 @@ scale = Vector2(0.3, 0.3)
 [node name="effect" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Effect:"
-label_settings = SubResource("LabelSettings_ifk7c")
+label_settings = ExtResource("10_1ycko")
 
 [node name="DescriptionEffect" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
-label_settings = SubResource("LabelSettings_ifk7c")
+label_settings = ExtResource("10_1ycko")
 autowrap_mode = 2
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="."]
@@ -514,9 +510,9 @@ scale = Vector2(0.24, 0.24)
 [node name="Type" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 text = "Type: "
-label_settings = SubResource("LabelSettings_ifk7c")
+label_settings = ExtResource("10_1ycko")
 
 [node name="Typevalue" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 text = "underground"
-label_settings = SubResource("LabelSettings_ifk7c")
+label_settings = ExtResource("10_1ycko")
