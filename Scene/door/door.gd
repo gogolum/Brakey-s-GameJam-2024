@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var main_icon_rect = $UI/MainIconRect
-@onready var secondary_icon_rect = $UI/SecondaryIconRect
-@onready var sub_icon_rect_2 = $UI/SubIconRect2
-@onready var sub_icon_rect = $UI/SubIconRect
+@onready var main_icon_rect = $NextAttacks/MainIconRect
+@onready var secondary_icon_rect = $NextAttacks/SecondaryIconRect
+@onready var sub_icon_rect_2 = $NextAttacks/SubIconRect2
+@onready var sub_icon_rect = $NextAttacks/SubIconRect
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

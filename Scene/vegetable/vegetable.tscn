@@ -62,10 +62,15 @@ offset_bottom = 35.7143
 texture = ExtResource("5_5va8u")
 
 [node name="VegetableIcon" type="TextureRect" parent="GrowthProgressBar"]
+layout_mode = 0
 offset_left = 7.14286
 offset_top = 7.14286
 offset_right = 47.1429
 offset_bottom = 47.1429
 scale = Vector2(0.46, 0.46)
+
+[node name="DragTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [connection signal="pressed" from="DragButton" to="." method="_on_drag_button_pressed"]
