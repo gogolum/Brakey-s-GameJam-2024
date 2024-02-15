@@ -5,6 +5,7 @@
 
 [node name="Vegetable" type="TextureRect"]
 show_behind_parent = true
+z_index = 2
 offset_right = 32.0
 offset_bottom = 32.0
 pivot_offset = Vector2(15, 15)
@@ -35,5 +36,21 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.95137, 0.951091)
 action_mode = 0
+
+
+[node name="GrowthProgressBar" parent="." instance=ExtResource("3_xbwty")]
+modulate = Color(1, 1, 1, 0.839216)
+z_index = 3
+layout_mode = 1
+offset_left = -14.0
+offset_top = -15.0
+offset_right = -14.0
+offset_bottom = -15.0
+scale = Vector2(0.7, 0.7)
+
+[node name="DragTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 
 [connection signal="pressed" from="DragButton" to="." method="_on_drag_button_pressed"]

@@ -56,7 +56,7 @@ var isbought : bool = false
 
 func _process(_delta):
 	if picked_up:
-		global_position = get_global_mouse_position()
+		global_position = get_global_mouse_position() # + Vector2(-55,-55)
 	
 	if Input.is_action_just_released("LeftClick"):
 		mouse_released.emit()
@@ -81,6 +81,17 @@ func _on_drag_button_pressed():
 			GlobalInfo.coin -= vegetable.price
 			#envoie l'info au jardin qu'un légume a été planté
 			GlobalInfo.planted.emit()
+			$DragTimer.start()
+	if isbought and $DragTimer.is_stopped() and current_growState >= growing_time:
+		var vegetable = self
+		picked_up = true
+		#if GlobalInfo.canSell == true:
+			#vegetable.modulate 
+		await mouse_released
+		picked_up = false
+		if GlobalInfo.canSell == true:
+			vegetable.queue_free()
+
 func destroy():
 	queue_free()
 
