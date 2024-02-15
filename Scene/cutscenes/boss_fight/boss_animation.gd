@@ -3,6 +3,17 @@ extends Control
 @onready var door_sprite = $CanvasLayer/Boss_Background/DoorSprite
 @onready var boss_attacks_display = $CanvasLayer/BossAttacksDisplay
 
+#player and monster labels
+@onready var player_stat_label = $CanvasLayer/StatLabelContainer/PlayerStatLabel
+@onready var monster_stat_label = $CanvasLayer/StatLabelContainer/MonsterStatLabel
+@onready var stat_label_container = $CanvasLayer/StatLabelContainer
+
+#result label
+@onready var result_of_fight_container = $CanvasLayer/ResultOfFightContainer
+@onready var result_label = $CanvasLayer/ResultOfFightContainer/ResultLabel
+
+#door bar
+@onready var door_life_bar = $CanvasLayer/LifeBar/DoorLifeBar
 
 var boss_attacks = preload("res://Scene/door/door.tscn")
 
@@ -21,7 +32,14 @@ func _ready():
 	new_layout.get_node("NextAttacks").get_node("IndicatorLabel").hide()
 	new_layout.get_node("NextAttacks").get_node("PanelContainer").hide()
 	boss_attacks_display.add_child(new_layout)
-
+	
+	#hide all the fights variable
+	stat_label_container.hide()
+	result_of_fight_container.hide()
+	
+	#sets the life of the bar
+	change_life(100)
+	
 func update_attacks_display_slots(stage):
 	#get all icon panels
 	var main_icon_panel = new_layout.get_node("NextAttacks").get_node("MainIconRect").get_node("Panel")
@@ -56,11 +74,12 @@ func update_attacks_display_slots(stage):
 	
 func change_life(life_point):
 	if door_life + life_point < 0:
-		return "you loose"
+		get_tree().quit()
 	elif door_life + life_point > 100:
 		door_life = 100
 	else :
 		door_life += life_point
+	door_life_bar.value = door_life
 
 func compare(player_stat, boss_stat):
 	#compare_animation()
@@ -71,15 +90,40 @@ func _on_button_button_up():
 	next_phase.emit()
 
 func fight():
-	#make list to hold all the catastrophies in order
-	var catastrophies_list = []
-	for element in GlobalInfo.global_monster_stats:
-		catastrophies_list.append(element)
 	
-	update_attacks_display_slots(boss_fight_stage)
-	await next_phase
-	print(compare(GlobalInfo.global_monster_stats[catastrophies_list[0]], GlobalInfo.global_stats[catastrophies_list[0]]))
-	
+	for boss_fight_stage in range(4):
+		#make list to hold all the catastrophies in order
+		var catastrophies_list = []
+		
+		for element in GlobalInfo.global_monster_stats:
+			catastrophies_list.append(element)
+		
+		update_attacks_display_slots(boss_fight_stage)
+		
+		await next_phase
+		
+		stat_label_container.show()
+		player_stat_label.text = str(GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]])
+		monster_stat_label.text = str(GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]])
+		
+		await next_phase
+		
+		stat_label_container.hide()
+		result_of_fight_container.show()
+		
+		var result_of_fight = compare(GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]], GlobalInfo.global_monster_stats[catastrophies_list[boss_fight_stage]])
+		result_label.text = str(result_of_fight)
+		
+		if result_of_fight > 0 :
+			result_label.modulate = Color(0, 0.831, 0)
+		else :
+			result_label.modulate = Color(0.949, 0, 0)
+			change_life(result_of_fight)
+		
+		await next_phase
+		
+		result_of_fight_container.hide()
+		
 
 
 func _on_button_2_button_up():
