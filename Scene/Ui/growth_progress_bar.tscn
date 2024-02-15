@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://drsrdy8etpft5"]
+
+[ext_resource type="Texture2D" uid="uid://ppqnttw8netc" path="res://Assets/icon/circularProgressBarEmpty.png" id="1_yby7f"]
+[ext_resource type="Texture2D" uid="uid://chn6n6jqsvopy" path="res://Assets/icon/circularProgressBarfull.png" id="2_7v6ud"]
+[ext_resource type="Texture2D" uid="uid://deb1x250uy8b5" path="res://Assets/icon/GrowBaground.png" id="3_cmelv"]
+[ext_resource type="Texture2D" uid="uid://fuyl6teslpy8" path="res://Assets/Legume_sprite/Fruits and Vegetables/Aubergine.png" id="4_i36ct"]
+
+[node name="GrowthProgressBar" type="TextureProgressBar"]
+modulate = Color(1, 1, 1, 0.980392)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 50.0
+fill_mode = 4
+texture_over = ExtResource("1_yby7f")
+texture_progress = ExtResource("2_7v6ud")
+
+[node name="bulle" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 36.0
+offset_bottom = 37.0
+texture = ExtResource("3_cmelv")
+
+[node name="vegetable" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 47.0
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("4_i36ct")

@@ -3,6 +3,8 @@ class_name  Vegetable
 
 @onready var vegetable_texture = $VegetableTexture
 @onready var sprout_texture = $SproutTexture
+@onready var growth_progress_bar = $GrowthProgressBar
+
 
 @export var vegetable_name : String
 
@@ -27,10 +29,20 @@ signal picked_up_changed(picked)
 @onready var drag_button = $DragButton
 
 
+func _ready():
+	current_growState = 0
+	growth_progress_bar.max_value = growing_time
+	initialise()
+	new_stat_catastrophe = stat_catastrophe
+
+func initialise():
+	pass
 
 var isover_empty_plot : bool
-func effect(adjacent : Array):
+func effect(adjacent : Array, onDayChanged : bool):
 	pass
+
+#function a call dans le ready de toutes les plantes et qui les initialises
 
 var picked_up : bool = false :
 	set(b):
@@ -67,6 +79,7 @@ func _on_drag_button_pressed():
 			isbought = true
 			grown_state()
 			GlobalInfo.coin -= vegetable.price
+			#envoie l'info au jardin qu'un légume a été planté
 			GlobalInfo.planted.emit()
 func destroy():
 	queue_free()
@@ -76,10 +89,15 @@ func grown_state():
 		if current_growState < growing_time:
 			sprout_texture.show()
 			vegetable_texture.visible = false
+			growth_progress_bar.show()
+			growth_progress_bar.value = current_growState
+			growth_progress_bar.get_child(1).texture = vegetable_texture.texture
 		else :
+			growth_progress_bar.hide()
 			vegetable_texture.show()
 			sprout_texture.hide()
 	else :
+		growth_progress_bar.hide()
 		vegetable_texture.show()
 		sprout_texture.hide()
 
