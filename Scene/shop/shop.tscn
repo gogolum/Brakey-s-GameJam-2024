@@ -98,6 +98,7 @@ theme_override_fonts/font = ExtResource("4_ixnv2")
 text = "3 $"
 
 [node name="SoldIcon" parent="ShopList/ShopSlot2" instance=ExtResource("5_tgv8h")]
+layout_mode = 0
 offset_left = 0.9375
 offset_top = 4.625
 offset_right = 32.9375
@@ -140,6 +141,7 @@ theme_override_fonts/font = ExtResource("4_ixnv2")
 text = "3 $"
 
 [node name="SoldIcon" parent="ShopList/ShopSlot3" instance=ExtResource("5_tgv8h")]
+layout_mode = 0
 offset_left = 0.9375
 offset_top = 4.625
 offset_right = 32.9375
@@ -183,6 +185,7 @@ text = "3 $"
 
 [node name="SoldIcon" parent="ShopList/ShopSlot4" instance=ExtResource("5_tgv8h")]
 visible = false
+layout_mode = 0
 offset_left = 0.9375
 offset_top = 4.625
 offset_right = 32.9375
@@ -226,6 +229,7 @@ text = "3 $"
 
 [node name="SoldIcon" parent="ShopList/ShopSlot5" instance=ExtResource("5_tgv8h")]
 visible = false
+layout_mode = 0
 offset_left = 0.9375
 offset_top = 4.625
 offset_right = 32.9375
@@ -269,6 +273,7 @@ text = "3 $"
 
 [node name="SoldIcon" parent="ShopList/ShopSlot6" instance=ExtResource("5_tgv8h")]
 visible = false
+layout_mode = 0
 offset_left = 0.9375
 offset_top = 4.625
 offset_right = 32.9375
