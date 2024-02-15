@@ -81,6 +81,18 @@ func _on_drag_button_pressed():
 			GlobalInfo.coin -= vegetable.price
 			#envoie l'info au jardin qu'un légume a été planté
 			GlobalInfo.planted.emit()
+			$DragTimer.start()
+	if isbought and $DragTimer.is_stopped() and current_growState >= growing_time:
+		var vegetable = self
+		picked_up = true
+		#if GlobalInfo.canSell == true:
+			#vegetable.modulate 
+		await mouse_released
+		picked_up = false
+		if GlobalInfo.canSell == true:
+			vegetable.queue_free()
+			GlobalInfo.coin += sell_price
+		pass
 func destroy():
 	queue_free()
 

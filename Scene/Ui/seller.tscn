@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://yd0bg4ncu6mp"]
+
+[ext_resource type="Script" path="res://Scene/Ui/seller.gd" id="1_2rhbo"]
+[ext_resource type="Texture2D" uid="uid://wjtxxlt2us27" path="res://Assets/market.png" id="1_04gdt"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="2_x75ey"]
+[ext_resource type="Texture2D" uid="uid://bme3yrpqwj0jx" path="res://Assets/icon/MonedaD.png" id="4_aqp7a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twcok"]
+atlas = ExtResource("4_aqp7a")
+region = Rect2(1, 0, 14, 16)
+
+[node name="seller" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2rhbo")
+
+[node name="market" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 88.0
+texture = ExtResource("1_04gdt")
+
+[node name="texte" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 381.0
+offset_bottom = 189.0
+scale = Vector2(0.3, 0.3)
+text = "drag here 
+to sell"
+label_settings = ExtResource("2_x75ey")
+
+[node name="piece" type="TextureRect" parent="."]
+offset_left = 154.0
+offset_top = 29.0
+offset_right = 194.0
+offset_bottom = 69.0
+scale = Vector2(1.1, 1.1)
+texture = SubResource("AtlasTexture_twcok")
+
+[node name="price" type="Label" parent="."]
+offset_left = 167.0
+offset_top = 35.0
+offset_right = 207.0
+offset_bottom = 115.0
+scale = Vector2(0.5, 0.5)
+text = "1"
+label_settings = ExtResource("2_x75ey")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

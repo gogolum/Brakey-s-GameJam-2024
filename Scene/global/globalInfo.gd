@@ -47,3 +47,5 @@ var dayCount : int = 0:
 		changeDay.emit()
 
 signal planted
+#systeme de vente de plante
+var canSell
