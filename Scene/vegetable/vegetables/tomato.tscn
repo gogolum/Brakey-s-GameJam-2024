@@ -6,10 +6,12 @@
 
 [node name="Tomato" instance=ExtResource("1_3tlg6")]
 script = ExtResource("2_47oun")
-price = 3
+vegetable_name = "tomato"
+type = "sun"
+price = 8
+sell_price = 19
+effect_description = "gain permanently 1 fire for each day where every adjacent tiles are empty"
+growing_time = 5
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("3_q8idc")
-
-[node name="VegetableIcon" parent="TextureProgressBar" index="1"]
-layout_mode = 0

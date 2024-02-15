@@ -80,8 +80,9 @@ func grid_update(onDayChanged : bool):
 			
 			#check if current slot isn't empty
 			if garden_vegetable != [] :
-				#garden_vegetable[0].grown_state()
-				garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)),onDayChanged)
+				if garden_vegetable[0].isGrown():
+					#garden_vegetable[0].grown_state()
+					garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)),onDayChanged)
 	
 	var total_stat = [0, 0, 0, 0]
 	for i in range(len(control_list)):

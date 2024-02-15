@@ -7,6 +7,5 @@
 [node name="rutabaga" instance=ExtResource("1_s0t8d")]
 script = ExtResource("2_4587v")
 
-[node name="VegetableTexture" parent="." index="2"]
-layout_mode = 0
+[node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_cfjhg")
