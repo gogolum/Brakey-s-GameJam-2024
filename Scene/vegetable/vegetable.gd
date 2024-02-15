@@ -12,8 +12,13 @@ class_name  Vegetable
 @export var price: int 
 @export var sell_price: int 
 
-@export var stat_catastrophe : Array = [0,0,0,0] #0 = tramblement de terre; 1 = incendi; 2 = tornade ; 3 = tsunami
-var new_stat_catastrophe : Array = stat_catastrophe
+@export var stat_catastrophe : Dictionary = {
+	"EARTHQUAKE" : 0,
+	"FIRE" : 0,
+	"TORNADO" : 0,
+	"TSUNAMI" : 0
+}
+var new_stat_catastrophe : Dictionary = stat_catastrophe
 
 @export var effect_description : String = "je donne 1 point de ..."
 

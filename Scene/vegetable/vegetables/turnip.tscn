@@ -10,7 +10,12 @@ vegetable_name = "turnip"
 type = "sun"
 price = 9
 sell_price = 15
-stat_catastrophe = [1, 2, 3, 4]
+stat_catastrophe = {
+"EARTHQUAKE": 2,
+"FIRE": 69,
+"TORNADO": 0,
+"TSUNAMI": 1
+}
 effect_description = "gain 2 tsunami for each empty adjacent tile "
 growing_time = 3
 

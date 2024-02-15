@@ -84,7 +84,12 @@ func grid_update(onDayChanged : bool):
 					#garden_vegetable[0].grown_state()
 					garden_vegetable[0].effect(get_adjacent_tiles(Vector2(i,j)),onDayChanged)
 	
-	var total_stat = [0, 0, 0, 0]
+	var total_stat : Dictionary = {
+	"EARTHQUAKE" : 0,
+	"FIRE" : 0,
+	"TORNADO" : 0,
+	"TSUNAMI" : 0
+}
 	for i in range(len(control_list)):
 		for j in range(len(control_list[0])):
 			
@@ -96,9 +101,9 @@ func grid_update(onDayChanged : bool):
 				if onDayChanged ==  true:
 					#les plantes pousses
 					garden_vegetable[0].current_growState += 1
-				if garden_vegetable[0].current_growState >= garden_vegetable[0].growing_time:
-					for k in range(4):
-						total_stat[k] += garden_vegetable[0].new_stat_catastrophe[k]
+				if garden_vegetable[0].isGrown():
+					for element in total_stat:
+						total_stat[element] += garden_vegetable[0].new_stat_catastrophe[element]
 	
 	GlobalInfo.global_stats = total_stat
 	
@@ -111,10 +116,10 @@ func grid_update(onDayChanged : bool):
 	var tornado_label = stat_display_node.get_node("TornadoValue")
 	var tsunami_label = stat_display_node.get_node("TsunamiValue")
 	
-	earthquake_label.text = str(global_stats[0])
-	fire_label.text = str(global_stats[1])
-	tornado_label.text = str(global_stats[2])
-	tsunami_label.text = str(global_stats[3])	
+	earthquake_label.text = str(global_stats["EARTHQUAKE"])
+	fire_label.text = str(global_stats["FIRE"])
+	tornado_label.text = str(global_stats["TORNADO"])
+	tsunami_label.text = str(global_stats["TSUNAMI"])	
 
 func _ready():
 	generate_grid(grid_rows, grid_columns) 

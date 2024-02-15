@@ -30,7 +30,12 @@ var coin : int = 10:
 		udpate_stat.emit()
 		
 #global stats for the grid
-var global_stats : Array = [0, 0, 0, 0]
+var global_stats : Dictionary = {
+	"EARTHQUAKE" : 0,
+	"FIRE" : 0,
+	"TORNADO" : 0,
+	"TSUNAMI" : 0
+}
 
 var global_stat_icons : Dictionary = {
 	"EARTHQUAKE" : preload("res://Assets/icon/earthIcon.png"),

@@ -1,6 +1,6 @@
 extends Vegetable
 func initialise():
-	stat_catastrophe = [1,0,0,0]
+	new_stat_catastrophe["FIRE"] = 0
 	pass
 
 func effect(adjacent : Array, onDayChanged : bool):
@@ -10,6 +10,6 @@ func effect(adjacent : Array, onDayChanged : bool):
 			if element == []:
 				allGood += 1
 		if allGood == 4:
-			new_stat_catastrophe[1] += 1
+			new_stat_catastrophe["FIRE"] += 1
 
 
