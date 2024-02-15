@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://qg4j60lbo3mu"]
+
+[ext_resource type="Texture2D" uid="uid://03fmhgo66g5h" path="res://Assets/Legume_sprite/UI.png" id="1_12q6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcltq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5005"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ektyq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nad55"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wb1c"]
+atlas = ExtResource("1_12q6d")
+region = Rect2(289, 129, 46, 14)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -229.0
+offset_right = 200.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButon" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcltq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q5005")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ektyq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nad55")
+icon = SubResource("AtlasTexture_5wb1c")
+expand_icon = true
+
+[node name="FullscreenButon" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcltq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q5005")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ektyq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nad55")
+icon = SubResource("AtlasTexture_5wb1c")
+expand_icon = true
+
+[node name="QuitButon" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcltq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q5005")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ektyq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nad55")
+icon = SubResource("AtlasTexture_5wb1c")
+expand_icon = true
