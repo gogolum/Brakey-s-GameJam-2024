@@ -113,4 +113,6 @@ func grown_state():
 		vegetable_texture.show()
 		sprout_texture.hide()
 
-
+func isGrown():
+	
+	return current_growState >= growing_time
