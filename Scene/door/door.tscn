@@ -1,162 +1,30 @@
-[gd_scene load_steps=22 format=3 uid="uid://boilbg0t37mhd"]
+[gd_scene load_steps=9 format=3 uid="uid://boilbg0t37mhd"]
 
 [ext_resource type="Script" path="res://Scene/door/door.gd" id="1_6yer4"]
-[ext_resource type="Texture2D" uid="uid://obdjvagmko35" path="res://Assets/door/!Demon Door.png" id="1_xibb1"]
 [ext_resource type="Texture2D" uid="uid://bus3ywj1o2s58" path="res://Assets/door/fireIcon_resized.png" id="3_5u07l"]
 [ext_resource type="Texture2D" uid="uid://b1q22vw1bpaei" path="res://Assets/icon/earthIcon.png" id="4_sqayh"]
 [ext_resource type="Texture2D" uid="uid://j624qows4ax5" path="res://Assets/icon/tornadoIcon.png" id="5_ca5yq"]
 [ext_resource type="Texture2D" uid="uid://biuitxcerchkh" path="res://Assets/icon/tsunamiIcon.png" id="6_b46bg"]
 [ext_resource type="Texture2D" uid="uid://bvngbqdav74v8" path="res://Assets/door/greatterthan.png" id="7_gq0tn"]
-[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="8_mkxin"]
+[ext_resource type="LabelSettings" path="res://Scene/Ui/policeLabel.tres" id="8_mkxin"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntf6a"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(0, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tip5c"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(240, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_axu3n"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(480, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_voixs"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(720, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hj6iq"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(960, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_alo0t"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(1200, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cny3t"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(1440, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jr5t6"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(1680, 0, 240, 161)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hlxvu"]
-atlas = ExtResource("1_xibb1")
-region = Rect2(1920, 0, 240, 161)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ej88q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ntf6a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tip5c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_axu3n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_voixs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hj6iq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_alo0t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cny3t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jr5t6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hlxvu")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
-
-[sub_resource type="Animation" id="Animation_io26s"]
-resource_name = "Idle"
-length = 2.66667
-loop_mode = 1
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333, 1, 1.16667, 1.33333, 1.5, 1.66667, 1.83333, 2, 2.16667, 2.33333, 2.5, 2.66667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-}
-
-[sub_resource type="Animation" id="Animation_awu60"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lixmr"]
-_data = {
-"Idle": SubResource("Animation_io26s"),
-"RESET": SubResource("Animation_awu60")
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xsik"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
 
 [node name="Door" type="Node2D"]
-position = Vector2(96, 96)
+position = Vector2(164, -32)
 scale = Vector2(1.6, 1.6)
 script = ExtResource("1_6yer4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-sprite_frames = SubResource("SpriteFrames_ej88q")
-animation = &"Idle"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_lixmr")
-}
 
 [node name="NextAttacks" type="Control" parent="."]
 layout_mode = 3
@@ -170,37 +38,54 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = -103.0
 offset_top = 21.0
-offset_right = 94.0
+offset_right = 97.0
 offset_bottom = 120.0
 
-[node name="Label" type="Label" parent="NextAttacks"]
+[node name="IndicatorLabel" type="Label" parent="NextAttacks"]
 layout_mode = 2
-offset_left = -101.25
-offset_top = 23.125
-offset_right = 548.75
-offset_bottom = 186.125
+offset_left = -100.0
+offset_top = 25.0
+offset_right = 550.0
+offset_bottom = 188.0
 scale = Vector2(0.3, 0.3)
 text = "Next apocalypse 
 attacks:"
 label_settings = ExtResource("8_mkxin")
 horizontal_alignment = 1
 
-[node name="MainIconRect" type="PanelContainer" parent="NextAttacks"]
+[node name="MainIconRect" type="Control" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 28.0
-offset_top = 76.0
-offset_right = 68.0
-offset_bottom = 116.0
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 72.5
+offset_right = 72.0
+offset_bottom = 117.5
+
+[node name="Panel" type="Panel" parent="NextAttacks/MainIconRect"]
+visible = false
+layout_mode = 2
+offset_right = 47.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xsik")
 
 [node name="TextureRect" type="TextureRect" parent="NextAttacks/MainIconRect"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.49999
+offset_top = 2.0
+offset_right = 7.49999
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
 texture = ExtResource("3_5u07l")
-expand_mode = 3
 
-[node name="SecondaryIconRect" type="PanelContainer" parent="NextAttacks"]
+[node name="SecondaryIconRect" type="Control" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
+anchors_preset = 0
 offset_left = -28.0
 offset_top = 80.0
 offset_right = 4.0
@@ -208,42 +93,75 @@ offset_bottom = 112.0
 
 [node name="TextureRect" type="TextureRect" parent="NextAttacks/SecondaryIconRect"]
 layout_mode = 2
+offset_left = -4.50001
+offset_top = 2.5
+offset_right = 27.5
+offset_bottom = 34.5
 texture = ExtResource("4_sqayh")
 expand_mode = 3
 
-[node name="SubIconRect2" type="PanelContainer" parent="NextAttacks"]
+[node name="Panel" type="Panel" parent="NextAttacks/SecondaryIconRect"]
+visible = false
+layout_mode = 2
+offset_left = -7.00001
+offset_right = 30.0
+offset_bottom = 37.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xsik")
+
+[node name="SubIconRect2" type="Control" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -68.0
+anchors_preset = 0
+offset_left = -82.5
 offset_top = 80.0
-offset_right = -52.0
+offset_right = -66.5
 offset_bottom = 96.0
 
 [node name="TextureRect" type="TextureRect" parent="NextAttacks/SubIconRect2"]
 layout_mode = 2
+offset_right = 16.0
+offset_bottom = 16.0
 texture = ExtResource("5_ca5yq")
 expand_mode = 3
 
-[node name="SubIconRect" type="PanelContainer" parent="NextAttacks"]
+[node name="Panel" type="Panel" parent="NextAttacks/SubIconRect2"]
+visible = false
+layout_mode = 2
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 20.5
+offset_bottom = 20.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xsik")
+
+[node name="SubIconRect" type="Control" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = -68.0
-offset_top = 96.0
-offset_right = -52.0
-offset_bottom = 112.0
+anchors_preset = 0
+offset_left = -82.49
+offset_top = 100.0
+offset_right = -66.49
+offset_bottom = 116.0
 
 [node name="TextureRect" type="TextureRect" parent="NextAttacks/SubIconRect"]
 layout_mode = 2
+offset_right = 16.0
+offset_bottom = 16.0
 texture = ExtResource("6_b46bg")
 expand_mode = 3
+
+[node name="Panel" type="Panel" parent="NextAttacks/SubIconRect"]
+visible = false
+offset_left = -2.51001
+offset_top = -2.5
+offset_right = 20.49
+offset_bottom = 20.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xsik")
 
 [node name="Greaterthansign" type="PanelContainer" parent="NextAttacks"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = -48.0
-offset_top = 88.0
-offset_right = -28.0
-offset_bottom = 108.0
+offset_left = -55.0
+offset_top = 87.5
+offset_right = -35.0
+offset_bottom = 107.5
 
 [node name="TextureRect" type="TextureRect" parent="NextAttacks/Greaterthansign"]
 layout_mode = 2
