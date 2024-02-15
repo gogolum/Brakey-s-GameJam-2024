@@ -10,6 +10,8 @@ var boss_fight_stage = 0
 
 var new_layout
 
+var door_life = 100
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	door_sprite.play("Idle")
@@ -50,7 +52,13 @@ func update_attacks_display_slots(stage):
 		sub_icon_panel.show()
 		sub2_icon_panel.hide()
 	
-
+func change_life(life_point):
+	if door_life + life_point < 0:
+		return "you loose"
+	elif door_life + life_point > 100:
+		door_life = 100
+	else :
+		door_life += life_point
 
 
 func _on_button_button_up():
