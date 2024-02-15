@@ -46,6 +46,9 @@ var global_stat_icons : Dictionary = {
 
 var global_stat_icons_name : Array = ["EARTHQUAKE", "FIRE", "TORNADO", "TSUNAMI"]
 
+var global_boss_stats_data
+var global_boss_stats_textures
+
 var numberOfFight : int = 0
 var global_monster_stats : Dictionary
 #day système
