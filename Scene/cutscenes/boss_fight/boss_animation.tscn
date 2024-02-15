@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://5w2uckepo61b"]
+[gd_scene load_steps=25 format=3 uid="uid://5w2uckepo61b"]
 
 [ext_resource type="Script" path="res://Scene/cutscenes/boss_fight/boss_animation.gd" id="1_puylk"]
 [ext_resource type="Texture2D" uid="uid://obdjvagmko35" path="res://Assets/door/!Demon Door.png" id="2_eg5gg"]
@@ -155,6 +155,16 @@ font_color = Color(0.94902, 0, 0, 1)
 font = ExtResource("5_ntr0q")
 font_size = 80
 
+[sub_resource type="LabelSettings" id="LabelSettings_iryc8"]
+font = ExtResource("5_ntr0q")
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2tkw"]
+font = ExtResource("5_ntr0q")
+font_size = 80
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
 [node name="BossAnimation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -196,6 +206,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="DoorLifeBar" type="TextureProgressBar" parent="CanvasLayer/LifeBar"]
+layout_mode = 0
 offset_left = 320.0
 offset_top = 448.0
 offset_right = 384.0
@@ -205,35 +216,11 @@ value = 10.0
 texture_over = ExtResource("3_mc8as")
 texture_progress = ExtResource("4_wsegs")
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 128.0
-offset_top = 384.0
-offset_right = 220.0
-offset_bottom = 415.0
-scale = Vector2(3, 3)
-text = "Next Stage"
-
-[node name="Button2" type="Button" parent="CanvasLayer"]
-offset_left = 132.0
-offset_top = 252.0
-offset_right = 217.0
-offset_bottom = 283.0
-scale = Vector2(3, 3)
-text = "New stats"
-
-[node name="Button3" type="Button" parent="CanvasLayer"]
-offset_left = 128.0
-offset_top = 164.0
-offset_right = 214.0
-offset_bottom = 195.0
-scale = Vector2(3, 3)
-text = "Start fight"
-
 [node name="StatLabelContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_left = 176.0
-offset_top = 48.0
+offset_top = 74.0
 offset_right = 1104.0
-offset_bottom = 172.0
+offset_bottom = 198.0
 theme_override_constants/separation = 55
 alignment = 1
 
@@ -253,11 +240,10 @@ text = "18"
 label_settings = SubResource("LabelSettings_p0imv")
 
 [node name="ResultOfFightContainer" type="HBoxContainer" parent="CanvasLayer"]
-visible = false
 offset_left = 176.0
-offset_top = 48.0
+offset_top = 72.0
 offset_right = 1104.0
-offset_bottom = 172.0
+offset_bottom = 196.0
 theme_override_constants/separation = 55
 alignment = 1
 
@@ -266,6 +252,48 @@ layout_mode = 2
 text = "-14"
 label_settings = SubResource("LabelSettings_pcgg4")
 
-[connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_button_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button2" to="." method="_on_button_2_button_up"]
-[connection signal="button_up" from="CanvasLayer/Button3" to="." method="_on_button_3_button_up"]
+[node name="WinScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Boss_Background" type="PanelContainer" parent="WinScreen"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="WinScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -164.5
+offset_right = 325.0
+offset_bottom = 164.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WinLabel" type="Label" parent="WinScreen/CenterContainer"]
+layout_mode = 2
+text = "Congratulations ! 
+You protected the door 
+from being opened"
+label_settings = SubResource("LabelSettings_iryc8")
+horizontal_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="NextLabel" type="Label" parent="CanvasLayer2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -467.0
+offset_top = 12.0
+offset_right = 468.0
+offset_bottom = 92.0
+grow_horizontal = 2
+text = "Press space to continue"
+label_settings = SubResource("LabelSettings_r2tkw")

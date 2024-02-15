@@ -76,4 +76,4 @@ func get_stat_dictionnary():
 	pass
 
 func _ready():
-	generate_monster_stats(0)
+	generate_monster_stats(GlobalInfo.numberOfFight)

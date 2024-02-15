@@ -46,10 +46,11 @@ var global_stat_icons : Dictionary = {
 
 var global_stat_icons_name : Array = ["EARTHQUAKE", "FIRE", "TORNADO", "TSUNAMI"]
 
+var numberOfFight : int = 0
 var global_monster_stats : Dictionary
 #day système
 signal changeDay
-var dayCount : int = 0:
+var dayCount : int = 1:
 	set(value):
 		dayCount = value
 		changeDay.emit()
@@ -57,3 +58,4 @@ var dayCount : int = 0:
 signal planted
 #systeme de vente de plante
 var canSell
+

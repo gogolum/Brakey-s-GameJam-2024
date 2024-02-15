@@ -100,4 +100,6 @@ scale = Vector2(0.16, 0.16)
 text = " day "
 label_settings = SubResource("LabelSettings_dmah8")
 
+[node name="FightScene" type="CanvasLayer" parent="."]
+
 [connection signal="pressed" from="CanvasLayer2/NextDayButton" to="." method="_on_button_pressed"]

@@ -37,9 +37,15 @@ func _ready():
 	stat_label_container.hide()
 	result_of_fight_container.hide()
 	
-	#sets the life of the bar
+	#sets the life of the bar 
 	change_life(100)
+
+func _process(delta):
 	
+	if Input.is_action_just_pressed("skipScene"):
+		next_phase.emit()
+
+
 func update_attacks_display_slots(stage):
 	#get all icon panels
 	var main_icon_panel = new_layout.get_node("NextAttacks").get_node("MainIconRect").get_node("Panel")
@@ -86,8 +92,6 @@ func compare(player_stat, boss_stat):
 	return player_stat - boss_stat
 
 
-func _on_button_button_up():
-	next_phase.emit()
 
 func fight():
 	
@@ -99,8 +103,6 @@ func fight():
 			catastrophies_list.append(element)
 		
 		update_attacks_display_slots(boss_fight_stage)
-		
-		await next_phase
 		
 		stat_label_container.show()
 		player_stat_label.text = str(GlobalInfo.global_stats[catastrophies_list[boss_fight_stage]])
@@ -123,12 +125,8 @@ func fight():
 		await next_phase
 		
 		result_of_fight_container.hide()
-		
-
-
-func _on_button_2_button_up():
-	new_layout.generate_monster_stats(2)
-
-
-func _on_button_3_button_up():
-	fight()
+	$WinScreen.show()
+	$CanvasLayer.queue_free()
+	await next_phase
+	GlobalInfo.numberOfFight += 1
+	queue_free()
