@@ -6,6 +6,18 @@
 
 [node name="beet" instance=ExtResource("1_14mw8")]
 script = ExtResource("2_satfg")
+vegetable_name = "beet"
+type = "underground"
+price = 3
+sell_price = 6
+stat_catastrophe = {
+"EARTHQUAKE": 0,
+"FIRE": 1,
+"TORNADO": 1,
+"TSUNAMI": 1
+}
+effect_description = ""
+growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_nt01s")

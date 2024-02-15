@@ -6,6 +6,11 @@
 
 [node name="banana" instance=ExtResource("1_xpaxe")]
 script = ExtResource("2_bhnls")
+vegetable_name = "banana"
+type = "fruit"
+price = 15
+sell_price = 30
+growing_time = 8
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_1l1d3")
