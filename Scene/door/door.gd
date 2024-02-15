@@ -6,9 +6,9 @@ extends Node2D
 @onready var sub_icon_rect = $NextAttacks/SubIconRect
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	generate_monster_stats(1)
-	print(GlobalInfo.global_monster_stats)
+#func _process(delta):
+	#generate_monster_stats(1)
+	#print(GlobalInfo.global_monster_stats)
 	
 func generate_order():
 	
