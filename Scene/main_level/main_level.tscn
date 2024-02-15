@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c07iok3ds5ejs" path="res://Scene/Ui/banner.tscn" id="6_onhp2"]
 [ext_resource type="Texture2D" uid="uid://03fmhgo66g5h" path="res://Assets/Legume_sprite/UI.png" id="8_yat6m"]
 [ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="9_743hi"]
-[ext_resource type="PackedScene" uid="uid://yd0bg4ncu6mp" path="res://Scene/Ui/seller.tscn" id="11_6lcpo"]
+[ext_resource type="PackedScene" path="res://Scene/Ui/seller.tscn" id="11_6lcpo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bymup"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
