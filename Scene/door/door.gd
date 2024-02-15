@@ -5,12 +5,6 @@ extends Node2D
 @onready var sub_icon_rect_2 = $UI/SubIconRect2
 @onready var sub_icon_rect = $UI/SubIconRect
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$AnimatedSprite2D.play("Idle")
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
