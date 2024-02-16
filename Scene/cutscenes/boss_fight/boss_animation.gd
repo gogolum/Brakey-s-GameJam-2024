@@ -21,7 +21,7 @@ var boss_fight_stage = 0
 
 var new_layout
 
-var door_life = 100
+var door_life = 30
 
 signal next_phase
 
@@ -81,8 +81,8 @@ func update_attacks_display_slots(stage):
 func change_life(life_point):
 	if door_life + life_point < 0:
 		get_tree().quit()
-	elif door_life + life_point > 100:
-		door_life = 100
+	elif door_life + life_point > 30:
+		door_life = 30
 	else :
 		door_life += life_point
 	door_life_bar.value = door_life
