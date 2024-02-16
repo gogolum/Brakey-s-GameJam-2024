@@ -9,7 +9,7 @@ script = ExtResource("2_lveld")
 vegetable_name = "apple"
 type = "fruit"
 price = 3
-sell_price = 6
+sell_price = 7
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 2,

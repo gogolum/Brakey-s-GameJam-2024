@@ -9,11 +9,11 @@ script = ExtResource("2_01mse")
 vegetable_name = "turnip"
 type = "underground"
 price = 6
-sell_price = 10
+sell_price = 13
 stat_catastrophe = {
 "EARTHQUAKE": 2,
-"FIRE": 0,
-"TORNADO": 0,
+"FIRE": 1,
+"TORNADO": 1,
 "TSUNAMI": 1
 }
 effect_description = "+2 tsunami for each empty adjacent tile"

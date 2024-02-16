@@ -11,10 +11,10 @@ type = "fruit"
 price = 9
 sell_price = 18
 stat_catastrophe = {
-"EARTHQUAKE": 2,
-"FIRE": 1,
-"TORNADO": 1,
-"TSUNAMI": 1
+"EARTHQUAKE": 3,
+"FIRE": 2,
+"TORNADO": 2,
+"TSUNAMI": 2
 }
 effect_description = "permanently +1 fire when every adjacent plot are empty (every 2 days)"
 growing_time = 4
