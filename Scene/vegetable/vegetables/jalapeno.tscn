@@ -8,8 +8,8 @@
 script = ExtResource("2_0i1bg")
 vegetable_name = "jalapeno"
 type = "sun"
-price = 25
-sell_price = 50
+price = 18
+sell_price = 45
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 0,
@@ -17,7 +17,7 @@ stat_catastrophe = {
 "TSUNAMI": 0
 }
 effect_description = "+3 in all desaster for each adjacent plant, but double their growht time"
-growing_time = 6
+growing_time = 8
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_laufb")

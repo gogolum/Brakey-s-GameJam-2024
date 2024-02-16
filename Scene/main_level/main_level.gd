@@ -37,7 +37,7 @@ func _on_button_pressed():
 	await get_tree().create_timer(0.5).timeout
 	next_day_button.disabled = false
 	shop.regenerate_shop()
-	
+	$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 	if GlobalInfo.dayCount == 8:
 		$CanvasLayer2.hide()
 		var bossScene = BOSS_ANIMATION.instantiate()
@@ -58,6 +58,7 @@ func _on_button_pressed():
 
 func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
+	$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 	shop.regenerate_shop()
 
 func tutorial():

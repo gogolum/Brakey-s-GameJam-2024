@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=27 format=3 uid="uid://kf03i6o7vpe8"]
+
 
 [ext_resource type="Script" path="res://Scene/main_level/main_level.gd" id="1_hjl10"]
 [ext_resource type="PackedScene" uid="uid://btelc5pviqh5r" path="res://Scene/garden/garden.tscn" id="1_u2uwf"]
@@ -12,6 +14,7 @@
 [ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="9_743hi"]
 [ext_resource type="PackedScene" uid="uid://yd0bg4ncu6mp" path="res://Scene/Ui/seller.tscn" id="11_6lcpo"]
 [ext_resource type="AudioStream" uid="uid://8ils8twef52p" path="res://Assets/sound_effects/main_music.mp3" id="12_cm7o2"]
+[ext_resource type="LabelSettings" uid="uid://cfdg0di8ool2i" path="res://Scene/Ui/policeLabel.tres" id="13_bukcx"]
 [ext_resource type="StyleBox" uid="uid://dsil7vyko7rr4" path="res://Assets/tutorial pannel/new_style_box_flat.tres" id="13_xajg0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bymup"]
@@ -185,6 +188,15 @@ libraries = {
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="CanvasLayer2"]
 stream = ExtResource("12_cm7o2")
+
+[node name="Score" type="Label" parent="CanvasLayer2"]
+offset_left = 981.0
+offset_top = 30.0
+offset_right = 1231.0
+offset_bottom = 110.0
+scale = Vector2(0.7, 0.7)
+text = "Score:"
+label_settings = ExtResource("13_bukcx")
 
 [node name="Tutorial" type="CanvasLayer" parent="."]
 visible = false

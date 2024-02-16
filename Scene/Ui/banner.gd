@@ -1,4 +1,5 @@
 extends Control
+
 #texture
 @onready var texture_rect = $MarginContainer/TextureRect
 #price
@@ -29,3 +30,4 @@ func setBanner(vegetable : Vegetable):
 	tornado_value.text = str(vegetable.new_stat_catastrophe["TORNADO"])
 	tsunami_value.text = str(vegetable.new_stat_catastrophe["TSUNAMI"])
 	typevalue.text = vegetable.type
+	$Name.text = vegetable.name
