@@ -73,4 +73,4 @@ func play_sound(sound: String, variation : int):
 	await player.finished
 	player.queue_free()
 
-var tutorialOn : bool = true
+var tutorialOn : bool = false

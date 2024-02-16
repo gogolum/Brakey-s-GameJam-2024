@@ -80,7 +80,7 @@ func update_attacks_display_slots(stage):
 	
 func change_life(life_point):
 	if door_life + life_point < 0:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Scene/Menu/loose_screen/loose_screen.tscn")
 	elif door_life + life_point > 30:
 		door_life = 30
 	else :
