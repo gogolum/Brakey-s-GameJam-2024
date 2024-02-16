@@ -20,7 +20,8 @@ func _ready():
 	GlobalInfo.global_boss_stats_textures = door.generate_order()
 	GlobalInfo.global_boss_stats_data = door.generate_monster_stats(0)
 	door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
-	tutorial()
+	if GlobalInfo.tutorialOn:
+		tutorial()
 
 func _process(delta):
 	if GlobalInfo.hoovered_vegetable != null:
@@ -30,6 +31,7 @@ func _process(delta):
 		next_tutorial_phase.emit()
 
 func _on_button_pressed():
+	$CanvasLayer2/ButtonClick.play()
 	GlobalInfo.dayCount += 1
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
 	animation_player.play("fade_next_day")

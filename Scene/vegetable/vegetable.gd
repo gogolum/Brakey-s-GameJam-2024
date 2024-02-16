@@ -74,7 +74,7 @@ func _process(_delta):
 	grown_state()
 
 func _on_drag_button_pressed():
-	if !isbought:
+	if !isbought and GlobalInfo.coin >= price:
 		picked_up = true
 		await mouse_released
 		picked_up = false

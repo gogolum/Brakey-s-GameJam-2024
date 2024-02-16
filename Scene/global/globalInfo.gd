@@ -24,7 +24,7 @@ var hoovered_vegetable : Vegetable
 
 # gestion de l'argent entre les scenes
 signal udpate_stat
-var coin : int = 10:
+var coin : int = 15:
 	set(value):
 		coin = value
 		udpate_stat.emit()
@@ -72,3 +72,5 @@ func play_sound(sound: String, variation : int):
 	player.play()
 	await player.finished
 	player.queue_free()
+
+var tutorialOn : bool = true
