@@ -8,7 +8,7 @@
 script = ExtResource("2_bhnls")
 vegetable_name = "banana"
 type = "fruit"
-price = 22
+price = 16
 sell_price = 40
 stat_catastrophe = {
 "EARTHQUAKE": 2,

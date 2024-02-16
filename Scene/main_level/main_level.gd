@@ -60,6 +60,8 @@ func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
 	$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 	shop.regenerate_shop()
+	GlobalInfo.coin = 20
+	GlobalInfo.numberOfFight = 0
 
 func tutorial():
 	$Tutorial.show()

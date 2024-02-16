@@ -1,19 +1,15 @@
 extends Control
 
 
-var fullscreen_state : bool = true
+var fullscreen_state : bool = false
 
-func _on_tutorial_toggled(toggled_on):
-	if toggled_on:
-		$CenterContainer/VBoxContainer/Tutorial/Off.hide()
-		$CenterContainer/VBoxContainer/Tutorial/On.show()
-		GlobalInfo.tutorialOn = true
-	if !toggled_on:
+func _ready():
+	if !GlobalInfo.tutorialOn:
 		$CenterContainer/VBoxContainer/Tutorial/Off.show()
 		$CenterContainer/VBoxContainer/Tutorial/On.hide()
-		GlobalInfo.tutorialOn = false
-	pass # Replace with function body.
-
+	else:
+		$CenterContainer/VBoxContainer/Tutorial/Off.hide()
+		$CenterContainer/VBoxContainer/Tutorial/On.show()
 
 func _on_start_buton_button_up():
 	get_tree().change_scene_to_file("res://Scene/main_level/main_level.tscn")
@@ -23,15 +19,13 @@ func _on_start_buton_button_up():
 
 
 func _on_tutorial_button_up():
-	if GlobalInfo.tutorialOn == true:
+	if GlobalInfo.tutorialOn:
 		$CenterContainer/VBoxContainer/Tutorial/Off.show()
 		$CenterContainer/VBoxContainer/Tutorial/On.hide()
-		GlobalInfo.tutorialOn = false
 	else:
 		$CenterContainer/VBoxContainer/Tutorial/Off.hide()
 		$CenterContainer/VBoxContainer/Tutorial/On.show()
-		GlobalInfo.tutorialOn = true
-	pass # Replace with function body.
+	GlobalInfo.tutorialOn = !GlobalInfo.tutorialOn
 
 
 func _on_fullscreen_buton_button_down():

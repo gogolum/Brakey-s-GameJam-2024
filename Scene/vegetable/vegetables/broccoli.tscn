@@ -11,10 +11,10 @@ type = "sun"
 price = 14
 sell_price = 30
 stat_catastrophe = {
-"EARTHQUAKE": 2,
-"FIRE": 2,
-"TORNADO": 2,
-"TSUNAMI": 2
+"EARTHQUAKE": 3,
+"FIRE": 3,
+"TORNADO": 3,
+"TSUNAMI": 3
 }
 effect_description = "+4 earthquake +4 tsunami for each adjacent plant"
 growing_time = 4
