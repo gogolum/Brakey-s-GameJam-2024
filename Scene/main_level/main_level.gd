@@ -61,7 +61,7 @@ func initialise():
 	$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 	shop.regenerate_shop()
 	GlobalInfo.coin = 20
-	GlobalInfo.numberOfFight = 0
+	GlobalInfo.numberOfFight = 11
 
 func tutorial():
 	$Tutorial.show()

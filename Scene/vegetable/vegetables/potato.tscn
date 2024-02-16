@@ -16,7 +16,7 @@ stat_catastrophe = {
 "TORNADO": 2,
 "TSUNAMI": 2
 }
-effect_description = "+1 sell value each 2 days"
+effect_description = "+1 sell value each day"
 growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]
