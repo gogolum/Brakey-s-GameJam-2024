@@ -64,3 +64,17 @@ signal growed
 #systeme de vente de plante
 var canSell
 
+func play_sound(sound: String, variation : int):
+	
+	for child in get_parent().get_node('MainLevel').get_children():
+		if child.get_class() == 'AudioStreamPlayer':
+			if child.stream == load(sound):
+				return
+				
+	var player = AudioStreamPlayer.new()
+	player.stream = load(sound)
+	player.volume_db = variation
+	get_parent().get_node('MainLevel').add_child(player)
+	player.play()
+	await player.finished
+	player.queue_free()

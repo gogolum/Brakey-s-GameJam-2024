@@ -48,8 +48,8 @@ func _on_button_pressed():
 		GlobalInfo.dayCount = 1
 
 		day_counter.text = str(GlobalInfo.dayCount) + " day"
-
-
+	GlobalInfo.play_sound("res://Assets/sound_effects/new_day_bird_songs.mp3", 0)
+	
 
 func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"

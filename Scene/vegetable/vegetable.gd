@@ -94,20 +94,21 @@ func _on_drag_button_pressed():
 			var bought_icon = 0
 			grown_state()
 			
-			#envoie l'info au jardin qu'un légume a été planté
+			#envoie l'info au jardin qu'un légume a été planté and play the right sound
+			GlobalInfo.play_sound("res://Assets/sound_effects/plant_sound.mp3", -10)
 			GlobalInfo.planted.emit()
 			$DragTimer.start()
 			
 	if isbought and $DragTimer.is_stopped() and current_growState >= growing_time:
 		var vegetable = self
 		picked_up = true
-		#if GlobalInfo.canSell == true:
-			#vegetable.modulate 
+		GlobalInfo.play_sound("res://Assets/sound_effects/unroot_sound.mp3", -10)
 		await mouse_released
 		picked_up = false
 		vegetable.global_position = get_parent().global_position
 		
 		if GlobalInfo.canSell == true:
+			GlobalInfo.play_sound("res://Assets/sound_effects/sell_sound.mp3", 0)
 			vegetable.queue_free()
 			GlobalInfo.coin += sell_price
 		pass
