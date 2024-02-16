@@ -100,7 +100,7 @@ func _on_drag_button_pressed():
 
 			#envoie l'info au jardin qu'un légume a été planté and play the right sound
 			GlobalInfo.play_sound("res://Assets/sound_effects/plant_sound.mp3", -10)
-      
+	  
 			GlobalInfo.planted.emit()
 			$DragTimer.start()
 			
