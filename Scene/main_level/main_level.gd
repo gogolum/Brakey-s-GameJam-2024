@@ -53,8 +53,7 @@ func _on_button_pressed():
 		GlobalInfo.dayCount = 1
 
 		day_counter.text = str(GlobalInfo.dayCount) + " day"
-	$CanvasLayer2/NewDayMusic.play()
-	
+
 
 func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
