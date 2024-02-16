@@ -40,19 +40,17 @@ func apply_next_fight_textures(textures : Dictionary):
 	sub_icon_rect.get_node("TextureRect").texture = texture_list[3]
 	
 func generate_monster_stats(appocalipse_day):
-	
-	var base_monster_stats = [[10,14],[6, 10],[4,6],[4,6]]
-	
-	#calculate coefficient
 	var coefficient = 1.0
+	#calculate coefficient
 	for _i in range(appocalipse_day):
-		coefficient += 0.2
+		coefficient = GlobalInfo.numberOfFight * 2
+	var base_monster_stats = [[10*coefficient,14*coefficient],[6*coefficient, 10*coefficient],[4*coefficient,6*coefficient],[4*coefficient,6*coefficient]]
 	
 	#calculate final monster stats for the given appocalipse_day
 	var final_monster_stats = []
 	
 	for i in range(len(base_monster_stats)):
-		final_monster_stats.append(int(float(randi_range(base_monster_stats[i][0], base_monster_stats[i][1])) * coefficient))
+		final_monster_stats.append(int(float(randi_range(base_monster_stats[i][0], base_monster_stats[i][1]))))
 	
 	GlobalInfo.global_monster_stats = {}
 	var texture_list = GlobalInfo.global_boss_stats_textures
