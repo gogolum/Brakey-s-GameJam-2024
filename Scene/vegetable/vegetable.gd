@@ -74,31 +74,34 @@ func _process(_delta):
 	grown_state()
 
 func _on_drag_button_pressed():
-	if !isbought and GlobalInfo.coin >= price:
-		picked_up = true
-		await mouse_released
-		picked_up = false
-		
-		if GlobalInfo.hoovered_plot and GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').get_children() == []:
+	if !isbought:
+		if GlobalInfo.coin >= price:
+			picked_up = true
+			await mouse_released
+			picked_up = false
 			
-			var vegetable = self
-			var vegetable_parent = get_parent()
-			var sold_icon_parent = vegetable_parent.get_parent().get_parent().get_node("SoldIcon")
-			sold_icon_parent.show()
-			get_parent().remove_child(vegetable)
-			GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').add_child(vegetable)
-			vegetable.global_position = get_parent().get_parent().get_node('SlotSnappingPoint').global_position
-			
-			isbought = true
-			GlobalInfo.coin -= vegetable.price
-			var bought_icon = 0
-			grown_state()
-			#envoie l'info au jardin qu'un légume a été planté and play the right sound
-			GlobalInfo.play_sound("res://Assets/sound_effects/plant_sound.mp3", -10)
-	  
-			GlobalInfo.planted.emit()
-			$DragTimer.start()
-			
+			if GlobalInfo.hoovered_plot and GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').get_children() == []:
+				
+				var vegetable = self
+				var vegetable_parent = get_parent()
+				var sold_icon_parent = vegetable_parent.get_parent().get_parent().get_node("SoldIcon")
+				sold_icon_parent.show()
+				get_parent().remove_child(vegetable)
+				GlobalInfo.hoovered_plot.get_node('SlotSnappingPoint').add_child(vegetable)
+				vegetable.global_position = get_parent().get_parent().get_node('SlotSnappingPoint').global_position
+				
+				isbought = true
+				GlobalInfo.coin -= vegetable.price
+				var bought_icon = 0
+				grown_state()
+				#envoie l'info au jardin qu'un légume a été planté and play the right sound
+				GlobalInfo.play_sound("res://Assets/sound_effects/plant_sound.mp3", -10)
+		  
+				GlobalInfo.planted.emit()
+				$DragTimer.start()
+		else :
+			GlobalInfo.play_sound("res://Assets/sound_effects/shop_error_sound.mp3", 0)
+
 	if isbought and $DragTimer.is_stopped() and current_growState >= growing_time:
 		var vegetable = self
 		picked_up = true
