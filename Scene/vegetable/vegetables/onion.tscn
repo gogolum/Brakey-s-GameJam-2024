@@ -8,13 +8,13 @@
 script = ExtResource("2_ruh1o")
 vegetable_name = "onion"
 type = "underground"
-price = 8
+price = 9
 sell_price = 16
 stat_catastrophe = {
-"EARTHQUAKE": 2,
-"FIRE": 2,
-"TORNADO": 2,
-"TSUNAMI": 2
+"EARTHQUAKE": 1,
+"FIRE": 1,
+"TORNADO": 1,
+"TSUNAMI": 1
 }
 effect_description = "+1 in all desaster for each adjacent plants"
 growing_time = 5

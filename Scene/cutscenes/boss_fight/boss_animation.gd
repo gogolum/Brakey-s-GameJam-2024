@@ -129,6 +129,5 @@ func fight():
 	$WinScreen.show()
 	$CanvasLayer.queue_free()
 	await next_phase
-	GlobalInfo.numberOfFight += 1
 	get_parent().get_parent().get_node("CanvasLayer2").show()
 	queue_free()

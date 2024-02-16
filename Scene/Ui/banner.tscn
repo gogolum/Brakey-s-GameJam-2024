@@ -368,13 +368,12 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -219.0
-offset_top = -197.0
-offset_right = -89.0
-offset_bottom = -67.0
+offset_left = -230.0
+offset_top = -222.0
+offset_right = -100.0
+offset_bottom = -92.0
 grow_horizontal = 0
 grow_vertical = 2
-scale = Vector2(0.8, 0.8)
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 custom_minimum_size = Vector2(130, 130)
@@ -508,24 +507,6 @@ layout_mode = 2
 text = "+1 fire for each adjacent sun plant"
 label_settings = ExtResource("10_1ycko")
 autowrap_mode = 2
-
-[node name="VBoxContainer2" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 1032.0
-offset_top = 152.0
-offset_right = 1821.0
-offset_bottom = 232.0
-scale = Vector2(0.24, 0.24)
-
-[node name="Type" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
-text = "Type: "
-label_settings = ExtResource("10_1ycko")
-
-[node name="Typevalue" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
-text = "underground"
-label_settings = ExtResource("10_1ycko")
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0

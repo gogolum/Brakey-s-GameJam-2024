@@ -41,6 +41,7 @@ func _on_button_pressed():
 	shop.regenerate_shop()
 	$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 	if GlobalInfo.dayCount == 8:
+		GlobalInfo.numberOfFight += 1
 		$CanvasLayer2.hide()
 		var bossScene = BOSS_ANIMATION.instantiate()
 		$FightScene.add_child(bossScene)
@@ -48,13 +49,11 @@ func _on_button_pressed():
 		bossScene.fight()
 		
 		GlobalInfo.global_boss_stats_textures = door.generate_order()
-
-
 		door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
 		
 		GlobalInfo.dayCount = 1
-
 		day_counter.text = str(GlobalInfo.dayCount) + " day"
+		$CanvasLayer2/Score.text = "Score: " + str(GlobalInfo.numberOfFight)
 
 
 func initialise():

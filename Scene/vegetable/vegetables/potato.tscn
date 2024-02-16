@@ -8,7 +8,7 @@
 script = ExtResource("2_clolk")
 vegetable_name = "potato"
 type = "underground"
-price = 18
+price = 17
 sell_price = 23
 stat_catastrophe = {
 "EARTHQUAKE": 2,
