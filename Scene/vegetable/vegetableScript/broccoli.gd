@@ -8,7 +8,7 @@ func effect(adjacent : Array, onDayChanged : bool):
 	for element in adjacent:
 		if element != []:
 			if element[0].type == "sun" or element[0].type == "underground" and element[0].isGrown():
-				new_stat["TSUNAMI"] += 3
+				new_stat["TSUNAMI"] += 6
 				pass
 	new_stat_catastrophe = new_stat
 

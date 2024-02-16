@@ -10,6 +10,7 @@ vegetable_name = "wheat"
 type = "sun"
 price = 6
 sell_price = 10
+effect_description = "+1 coin each day"
 growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]

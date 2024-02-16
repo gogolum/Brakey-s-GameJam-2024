@@ -8,10 +8,16 @@
 script = ExtResource("2_clolk")
 vegetable_name = "potato"
 type = "underground"
-price = 10
-sell_price = 30
-effect_description = ""
-growing_time = 5
+price = 18
+sell_price = 23
+stat_catastrophe = {
+"EARTHQUAKE": 2,
+"FIRE": 2,
+"TORNADO": 2,
+"TSUNAMI": 2
+}
+effect_description = "+1 sell value each 2 days"
+growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_5hcx5")

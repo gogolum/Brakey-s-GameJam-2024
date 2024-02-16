@@ -95,6 +95,8 @@ func _on_drag_button_pressed():
 			grown_state()
 			
 			#envoie l'info au jardin qu'un légume a été planté
+			$Particule/PlantedParticule.global_position = global_position + Vector2(50,50)
+			$Particule/PlantedParticule.emitting = true
 			GlobalInfo.planted.emit()
 			$DragTimer.start()
 			

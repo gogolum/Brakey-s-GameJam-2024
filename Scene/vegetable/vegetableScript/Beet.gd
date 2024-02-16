@@ -4,11 +4,12 @@ func initialise():
 	pass
 	
 func effect(adjacent : Array, onDayChanged : bool):
-	var new_stat : Dictionary = stat_catastrophe.duplicate()
-	for element in adjacent:
-		if element != []:
-			if element[0].type == "fruit" and element[0].isGrown():
-				new_stat["EARTHQUAKE"] += 1
-				pass
-	new_stat_catastrophe = new_stat
-
+	if onDayChanged == true:
+		var is_sprout : bool = true
+		for element in adjacent:
+			if element != []:
+				if element[0].isGrown():
+					is_sprout = false
+		if is_sprout:
+			new_stat_catastrophe["EARTHQUAKE"] += 2
+			
