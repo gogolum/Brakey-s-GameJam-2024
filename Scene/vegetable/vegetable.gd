@@ -93,11 +93,6 @@ func _on_drag_button_pressed():
 			GlobalInfo.coin -= vegetable.price
 			var bought_icon = 0
 			grown_state()
-			
-
-			$Particule/PlantedParticule.global_position = global_position + Vector2(50,50)
-			$Particule/PlantedParticule.emitting = true
-
 			#envoie l'info au jardin qu'un légume a été planté and play the right sound
 			GlobalInfo.play_sound("res://Assets/sound_effects/plant_sound.mp3", -10)
 	  
