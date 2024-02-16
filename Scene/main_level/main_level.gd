@@ -12,17 +12,22 @@ const BOSS_ANIMATION = preload("res://Scene/cutscenes/boss_fight/boss_animation.
 #next day button
 @onready var next_day_button = $CanvasLayer2/NextDayButton
 
+#tutorial signal
+signal next_tutorial_phase
 
 func _ready():
 	initialise()
 	GlobalInfo.global_boss_stats_textures = door.generate_order()
 	GlobalInfo.global_boss_stats_data = door.generate_monster_stats(0)
 	door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
+	#tutorial()
 
 func _process(delta):
 	if GlobalInfo.hoovered_vegetable != null:
 		banner.setBanner(GlobalInfo.hoovered_vegetable)
-
+	
+	if Input.is_action_just_pressed("skipScene"):
+		next_tutorial_phase.emit()
 
 func _on_button_pressed():
 	GlobalInfo.dayCount += 1
@@ -55,3 +60,12 @@ func initialise():
 	day_counter.text = str(GlobalInfo.dayCount) + " day"
 	shop.regenerate_shop()
 
+func tutorial():
+	$Tutorial.show()
+	
+	for child in $Tutorial.get_children():
+		child.show()
+		await next_tutorial_phase
+		child.hide()
+
+	$Tutorial.hide()
