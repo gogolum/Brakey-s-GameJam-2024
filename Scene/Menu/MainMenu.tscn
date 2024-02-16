@@ -97,6 +97,7 @@ icon = SubResource("AtlasTexture_5wb1c")
 expand_icon = true
 
 [node name="On" type="Label" parent="CenterContainer/VBoxContainer/Tutorial"]
+layout_mode = 0
 offset_left = 61.0
 offset_top = 39.0
 offset_right = 336.0
@@ -107,6 +108,7 @@ label_settings = SubResource("LabelSettings_ko7rm")
 
 [node name="Off" type="Label" parent="CenterContainer/VBoxContainer/Tutorial"]
 visible = false
+layout_mode = 0
 offset_left = 61.0
 offset_top = 39.0
 offset_right = 336.0
@@ -127,6 +129,7 @@ icon = SubResource("AtlasTexture_5wb1c")
 expand_icon = true
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/FullscreenButon"]
+layout_mode = 0
 offset_left = 36.0
 offset_top = 44.0
 offset_right = 441.0
