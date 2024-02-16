@@ -8,16 +8,16 @@
 script = ExtResource("2_hap7w")
 vegetable_name = "cherry"
 type = "fruit"
-price = 20
-sell_price = 40
+price = 18
+sell_price = 35
 stat_catastrophe = {
 "EARTHQUAKE": 2,
 "FIRE": 2,
-"TORNADO": 0,
+"TORNADO": 2,
 "TSUNAMI": 2
 }
-effect_description = "+9 tornado for each adjacent wheat"
-growing_time = 5
+effect_description = "+5 tornado +5 fire for each adjacent wheat or potato"
+growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_omecu")

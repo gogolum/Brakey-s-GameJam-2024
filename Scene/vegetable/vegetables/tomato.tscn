@@ -8,16 +8,16 @@
 script = ExtResource("2_47oun")
 vegetable_name = "tomato"
 type = "fruit"
-price = 12
-sell_price = 28
+price = 9
+sell_price = 18
 stat_catastrophe = {
-"EARTHQUAKE": 1,
-"FIRE": 0,
-"TORNADO": 0,
-"TSUNAMI": 0
+"EARTHQUAKE": 2,
+"FIRE": 1,
+"TORNADO": 1,
+"TSUNAMI": 1
 }
 effect_description = "permanently +1 fire when every adjacent plot are empty (every 2 days)"
-growing_time = 5
+growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("3_q8idc")

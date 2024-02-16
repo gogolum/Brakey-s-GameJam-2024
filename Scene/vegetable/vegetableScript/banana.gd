@@ -8,10 +8,10 @@ func effect(adjacent : Array, onDayChanged : bool):
 	for element in adjacent:
 		if element != []:
 			if !element[0].isGrown():
-				new_stat["EARTHQUAKE"] += 3
-				new_stat["FIRE"] += 3
-				new_stat["TORNADO"] += 3
-				new_stat["TSUNAMI"] += 3
+				new_stat["EARTHQUAKE"] += 6
+				new_stat["FIRE"] += 6
+				new_stat["TORNADO"] += 6
+				new_stat["TSUNAMI"] += 6
 				pass
 	new_stat_catastrophe = new_stat
 

@@ -5,7 +5,7 @@ func _process(delta):
 	if GlobalInfo.canSell == true and GlobalInfo.hoovered_vegetable != null and GlobalInfo.hoovered_vegetable.picked_up == true:
 		$piece.show()
 		$price.show()
-		$price.text = str(GlobalInfo.hoovered_vegetable.price)
+		$price.text = str(GlobalInfo.hoovered_vegetable.sell_price)
 	else:
 		$piece.hide()
 		$price.hide()

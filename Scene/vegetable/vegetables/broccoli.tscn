@@ -8,15 +8,15 @@
 script = ExtResource("2_u8ory")
 vegetable_name = "broccoli"
 type = "sun"
-price = 15
+price = 14
 sell_price = 30
 stat_catastrophe = {
-"EARTHQUAKE": 0,
+"EARTHQUAKE": 2,
 "FIRE": 2,
-"TORNADO": 0,
-"TSUNAMI": 0
+"TORNADO": 2,
+"TSUNAMI": 2
 }
-effect_description = "+3 tsunami for each underground and sun adjacent plant "
+effect_description = "+4 earthquake +4 tsunami for each adjacent plant"
 growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]

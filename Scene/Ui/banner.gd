@@ -14,8 +14,6 @@ extends Control
 @onready var firevalue = $desasterStatHolder/HBoxContainer/Firevalue
 @onready var tornado_value = $desasterStatHolder/HBoxContainer2/TornadoValue
 @onready var tsunami_value = $desasterStatHolder/HBoxContainer2/TsunamiValue
-#type
-@onready var typevalue = $VBoxContainer2/Typevalue
 
 
 func setBanner(vegetable : Vegetable):
@@ -29,5 +27,4 @@ func setBanner(vegetable : Vegetable):
 	firevalue.text = str(vegetable.new_stat_catastrophe["FIRE"])
 	tornado_value.text = str(vegetable.new_stat_catastrophe["TORNADO"])
 	tsunami_value.text = str(vegetable.new_stat_catastrophe["TSUNAMI"])
-	typevalue.text = vegetable.type
 	$Name.text = vegetable.name

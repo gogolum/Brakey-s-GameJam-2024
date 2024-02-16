@@ -13,5 +13,5 @@ func effect(adjacent : Array, onDayChanged : bool):
 				if element[0].isGrown():
 					is_sprout = false
 		if is_sprout:
-			new_stat_catastrophe["EARTHQUAKE"] += 2
+			new_stat_catastrophe["EARTHQUAKE"] += 4
 			

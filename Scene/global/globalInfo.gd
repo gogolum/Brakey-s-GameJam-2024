@@ -24,7 +24,7 @@ var hoovered_vegetable : Vegetable
 
 # gestion de l'argent entre les scenes
 signal udpate_stat
-var coin : int = 15:
+var coin : int = 20:
 	set(value):
 		coin = value
 		udpate_stat.emit()

@@ -16,7 +16,7 @@ stat_catastrophe = {
 "TORNADO": 1,
 "TSUNAMI": 1
 }
-effect_description = "+2 earthquake permanently if all the adjacent plant are sprout (daily)"
+effect_description = "+4 earthquake permanently if all the adjacent plant are sprout (daily)"
 growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]
