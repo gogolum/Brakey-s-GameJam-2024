@@ -13,9 +13,10 @@ sell_price = 6
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 0,
-"TORNADO": 1,
+"TORNADO": 2,
 "TSUNAMI": 1
 }
+effect_description = "+1 tornado +1 earthquake for each adjacent plant "
 growing_time = 3
 
 [node name="VegetableTexture" parent="." index="1"]

@@ -8,16 +8,16 @@
 script = ExtResource("2_wrecj")
 vegetable_name = "pumpkin"
 type = "sun"
-price = 25
-sell_price = 50
+price = 40
+sell_price = 20
 stat_catastrophe = {
-"EARTHQUAKE": 10,
-"FIRE": 10,
-"TORNADO": 10,
-"TSUNAMI": 10
+"EARTHQUAKE": 15,
+"FIRE": 15,
+"TORNADO": 15,
+"TSUNAMI": 15
 }
-effect_description = ""
-growing_time = 7
+effect_description = "nothing, just a good chunk of defense"
+growing_time = 8
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_sumbu")

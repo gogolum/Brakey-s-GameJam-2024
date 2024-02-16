@@ -7,16 +7,16 @@
 [node name="Tomato" instance=ExtResource("1_3tlg6")]
 script = ExtResource("2_47oun")
 vegetable_name = "tomato"
-type = "sun"
-price = 8
-sell_price = 16
+type = "fruit"
+price = 12
+sell_price = 28
 stat_catastrophe = {
 "EARTHQUAKE": 1,
 "FIRE": 0,
 "TORNADO": 0,
 "TSUNAMI": 0
 }
-effect_description = "gain permanently 1 fire for each day where every adjacent tiles are empty"
+effect_description = "permanently +1 fire when every adjacent plot are empty (daily)"
 growing_time = 5
 
 [node name="VegetableTexture" parent="." index="1"]

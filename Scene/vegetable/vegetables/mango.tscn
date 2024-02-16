@@ -8,15 +8,15 @@
 script = ExtResource("2_myb7f")
 vegetable_name = "mango"
 type = "fruit"
-price = 17
-sell_price = 20
+price = 25
+sell_price = 45
 stat_catastrophe = {
-"EARTHQUAKE": 0,
-"FIRE": 0,
-"TORNADO": 3,
-"TSUNAMI": 0
+"EARTHQUAKE": 1,
+"FIRE": 1,
+"TORNADO": 1,
+"TSUNAMI": 1
 }
-effect_description = ""
+effect_description = "double the growing speed of the ajdacent plants"
 growing_time = 4
 
 [node name="VegetableTexture" parent="." index="1"]

@@ -8,9 +8,16 @@
 script = ExtResource("2_bhnls")
 vegetable_name = "banana"
 type = "fruit"
-price = 15
+price = 20
 sell_price = 30
-growing_time = 8
+stat_catastrophe = {
+"EARTHQUAKE": 2,
+"FIRE": 2,
+"TORNADO": 2,
+"TSUNAMI": 2
+}
+effect_description = "+3 in each disaster for each adjacent sprout plants"
+growing_time = 5
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_1l1d3")

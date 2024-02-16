@@ -8,10 +8,16 @@
 script = ExtResource("2_4587v")
 vegetable_name = "rutabaga"
 type = "underground"
-price = 18
-sell_price = 25
-effect_description = ""
-growing_time = 6
+price = 35
+sell_price = 40
+stat_catastrophe = {
+"EARTHQUAKE": 3,
+"FIRE": 3,
+"TORNADO": 3,
+"TSUNAMI": 3
+}
+effect_description = "give 2 coin for each empty adjacent plot"
+growing_time = 8
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_cfjhg")
