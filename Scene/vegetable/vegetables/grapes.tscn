@@ -8,10 +8,10 @@
 script = ExtResource("2_wlwjt")
 vegetable_name = "grapes"
 type = "fruit"
-price = 12
-sell_price = 25
+price = 9
+sell_price = 22
 effect_description = "+3 for all stat for each apocalypse survived by the plant"
-growing_time = 7
+growing_time = 6
 
 [node name="VegetableTexture" parent="." index="1"]
 texture = ExtResource("2_odcs1")

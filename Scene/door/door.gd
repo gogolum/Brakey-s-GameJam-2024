@@ -44,8 +44,7 @@ func generate_monster_stats(appocalipse_day):
 	#calculate coefficient
 	for _i in range(appocalipse_day):
 		coefficient = GlobalInfo.numberOfFight * 1.5
-	var base_monster_stats = [[10*coefficient,12*coefficient],[7*coefficient, 8*coefficient],[4*coefficient,6*coefficient],[4*coefficient,6*coefficient]]
-	
+	var base_monster_stats = [[10*coefficient,12*coefficient],[7*coefficient, 8*coefficient],[4*coefficient,5*coefficient],[4*coefficient,5*coefficient]]
 	#calculate final monster stats for the given appocalipse_day
 	var final_monster_stats = []
 	

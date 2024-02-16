@@ -33,20 +33,7 @@ signal picked_up_changed(picked)
 
 @onready var drag_button = $DragButton
 
-
-func _ready():
-	current_growState = 0
-	growth_progress_bar.max_value = growing_time
-	initialise()
-	new_stat_catastrophe = stat_catastrophe
-
-func initialise():
-	pass
-
 var isover_empty_plot : bool
-func effect(adjacent : Array, onDayChanged : bool):
-	pass
-
 #function a call dans le ready de toutes les plantes et qui les initialises
 
 var picked_up : bool = false :
