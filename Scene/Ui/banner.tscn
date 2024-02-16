@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c07iok3ds5ejs"]
+[gd_scene load_steps=18 format=3 uid="uid://c07iok3ds5ejs"]
 
 [ext_resource type="Script" path="res://Scene/Ui/banner.gd" id="1_afdy1"]
 [ext_resource type="Texture2D" uid="uid://cv7xdq56i8d47" path="res://Assets/Legume_sprite/01.png" id="1_lp1l5"]
-[ext_resource type="Texture2D" uid="uid://2ebn4oylf42d" path="res://Assets/Legume_sprite/Fruits and Vegetables/Acorn.png" id="3_iili5"]
+[ext_resource type="Texture2D" uid="uid://b55cmhduhgtpf" path="res://Assets/Legume_sprite/Fruits and Vegetables/Carrot.png" id="3_l6t0e"]
 [ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="4_5gfm0"]
 [ext_resource type="Texture2D" uid="uid://b1q22vw1bpaei" path="res://Assets/icon/earthIcon.png" id="5_nvuq2"]
 [ext_resource type="Texture2D" uid="uid://cmvlusjnnefct" path="res://Assets/icon/fireIcon.png" id="6_smgbp"]
@@ -339,6 +339,12 @@ font = ExtResource("4_5gfm0")
 font_size = 300
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_62k7g"]
+font = ExtResource("4_5gfm0")
+font_size = 80
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Banner" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -362,17 +368,18 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -224.0
-offset_top = -213.0
-offset_right = -94.0
-offset_bottom = -83.0
+offset_left = -219.0
+offset_top = -197.0
+offset_right = -89.0
+offset_bottom = -67.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
-texture = ExtResource("3_iili5")
+texture = ExtResource("3_l6t0e")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -389,6 +396,7 @@ label_settings = SubResource("LabelSettings_te1qg")
 [node name="BuyValue" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
+text = "10"
 label_settings = SubResource("LabelSettings_te1qg")
 
 [node name="Sell" type="Label" parent="HBoxContainer"]
@@ -398,6 +406,7 @@ label_settings = SubResource("LabelSettings_te1qg")
 
 [node name="SellValue" type="Label" parent="HBoxContainer"]
 layout_mode = 2
+text = "20"
 label_settings = SubResource("LabelSettings_te1qg")
 
 [node name="desasterStatHolder" type="VBoxContainer" parent="."]
@@ -418,7 +427,7 @@ texture = ExtResource("5_nvuq2")
 [node name="earthquakeValue" type="Label" parent="desasterStatHolder/HBoxContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "11"
+text = "2"
 label_settings = SubResource("LabelSettings_tqofs")
 
 [node name="fire" type="TextureRect" parent="desasterStatHolder/HBoxContainer"]
@@ -430,7 +439,7 @@ expand_mode = 2
 [node name="Firevalue" type="Label" parent="desasterStatHolder/HBoxContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "11"
+text = "0"
 label_settings = SubResource("LabelSettings_tqofs")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="desasterStatHolder"]
@@ -443,7 +452,7 @@ texture = ExtResource("7_122tb")
 [node name="TornadoValue" type="Label" parent="desasterStatHolder/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "11"
+text = "3"
 label_settings = SubResource("LabelSettings_tqofs")
 
 [node name="Tsunami" type="TextureRect" parent="desasterStatHolder/HBoxContainer2"]
@@ -453,7 +462,7 @@ texture = ExtResource("8_5bweg")
 [node name="TsunamiValue" type="Label" parent="desasterStatHolder/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "11"
+text = "1"
 label_settings = SubResource("LabelSettings_tqofs")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
@@ -472,7 +481,7 @@ expand_mode = 3
 
 [node name="growingTimeValeur" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
-text = " 69"
+text = " 5"
 label_settings = SubResource("LabelSettings_ep3xh")
 
 [node name="growingTime" type="Label" parent="HBoxContainer2"]
@@ -484,9 +493,9 @@ label_settings = SubResource("LabelSettings_k36r5")
 layout_mode = 0
 offset_left = 1036.0
 offset_top = 449.0
-offset_right = 1636.0
+offset_right = 1686.0
 offset_bottom = 613.0
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.28, 0.28)
 
 [node name="effect" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -496,6 +505,7 @@ label_settings = ExtResource("10_1ycko")
 [node name="DescriptionEffect" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
+text = "+1 fire for each adjacent sun plant"
 label_settings = ExtResource("10_1ycko")
 autowrap_mode = 2
 
@@ -516,3 +526,13 @@ label_settings = ExtResource("10_1ycko")
 layout_mode = 2
 text = "underground"
 label_settings = ExtResource("10_1ycko")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 109.0
+offset_right = 1279.0
+offset_bottom = 189.0
+scale = Vector2(0.4, 0.4)
+text = "Carrot"
+label_settings = SubResource("LabelSettings_62k7g")

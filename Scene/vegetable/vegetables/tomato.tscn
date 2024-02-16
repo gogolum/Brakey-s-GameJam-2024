@@ -16,7 +16,7 @@ stat_catastrophe = {
 "TORNADO": 0,
 "TSUNAMI": 0
 }
-effect_description = "permanently +1 fire when every adjacent plot are empty (daily)"
+effect_description = "permanently +1 fire when every adjacent plot are empty (every 2 days)"
 growing_time = 5
 
 [node name="VegetableTexture" parent="." index="1"]

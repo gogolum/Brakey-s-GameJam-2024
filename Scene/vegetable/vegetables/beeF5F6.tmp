@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcgo7rmwqg38m"]
+
+[ext_resource type="PackedScene" uid="uid://w8v2eba32ld6" path="res://Scene/vegetable/vegetable.tscn" id="1_14mw8"]
+[ext_resource type="Texture2D" uid="uid://6rqfmcu2dq8k" path="res://Assets/Legume_sprite/Fruits and Vegetables/Beet.png" id="2_nt01s"]
+[ext_resource type="Script" path="res://Scene/vegetable/vegetableScript/Beet.gd" id="2_satfg"]
+
+[node name="beet" instance=ExtResource("1_14mw8")]
+script = ExtResource("2_satfg")
+vegetable_name = "beet"
+type = "underground"
+price = 3
+sell_price = 6
+stat_catastrophe = {
+"EARTHQUAKE": 0,
+"FIRE": 1,
+"TORNADO": 1,
+"TSUNAMI": 1
+}
+effect_description = "+2 earthquake permanently if all the adjacent plant are sprout (daily)"
+growing_time = 3
+
+[node name="VegetableTexture" parent="." index="1"]
+texture = ExtResource("2_nt01s")
