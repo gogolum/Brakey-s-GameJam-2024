@@ -20,7 +20,7 @@ func _ready():
 	GlobalInfo.global_boss_stats_textures = door.generate_order()
 	GlobalInfo.global_boss_stats_data = door.generate_monster_stats(0)
 	door.apply_next_fight_textures(GlobalInfo.global_boss_stats_textures)
-	#tutorial()
+	tutorial()
 
 func _process(delta):
 	if GlobalInfo.hoovered_vegetable != null:

@@ -174,6 +174,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Tutorial/Pannel1"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 358.0
@@ -181,6 +182,7 @@ offset_bottom = 760.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel1"]
+layout_mode = 0
 offset_left = 358.0
 offset_top = 132.0
 offset_right = 1350.0
@@ -188,6 +190,7 @@ offset_bottom = 760.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel3" type="Panel" parent="Tutorial/Pannel1"]
+layout_mode = 0
 offset_left = 971.0
 offset_top = -17.0
 offset_right = 1349.0
@@ -221,11 +224,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Tutorial/Pannel2"]
+layout_mode = 0
 offset_right = 359.0
 offset_bottom = 761.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel2"]
+layout_mode = 0
 offset_left = 358.0
 offset_top = 608.0
 offset_right = 1350.0
@@ -233,6 +238,7 @@ offset_bottom = 760.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel3" type="Panel" parent="Tutorial/Pannel2"]
+layout_mode = 0
 offset_left = 960.0
 offset_top = -17.0
 offset_right = 1349.0
@@ -240,6 +246,7 @@ offset_bottom = 608.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel4" type="Panel" parent="Tutorial/Pannel2"]
+layout_mode = 0
 offset_left = 352.0
 offset_top = -17.0
 offset_right = 960.0
@@ -273,6 +280,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Tutorial/Pannel3"]
+layout_mode = 0
 offset_left = 976.0
 offset_top = 624.0
 offset_right = 1344.0
@@ -280,6 +288,7 @@ offset_bottom = 768.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel3"]
+layout_mode = 0
 offset_left = -14.0
 offset_top = -32.0
 offset_right = 976.0
@@ -287,6 +296,7 @@ offset_bottom = 777.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel3" type="Panel" parent="Tutorial/Pannel3"]
+layout_mode = 0
 offset_left = 976.0
 offset_top = -61.0
 offset_right = 1362.0
@@ -321,6 +331,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel4"]
+layout_mode = 0
 offset_left = -14.0
 offset_top = -32.0
 offset_right = 992.0
@@ -328,6 +339,7 @@ offset_bottom = 777.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel3" type="Panel" parent="Tutorial/Pannel4"]
+layout_mode = 0
 offset_left = 992.0
 offset_top = -48.0
 offset_right = 1362.0
@@ -362,12 +374,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Tutorial/Pannel5"]
+layout_mode = 0
 offset_left = -32.0
 offset_right = 353.0
 offset_bottom = 761.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel5"]
+layout_mode = 0
 offset_left = 352.0
 offset_top = -16.0
 offset_right = 1376.0
@@ -375,6 +389,7 @@ offset_bottom = 612.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel3" type="Panel" parent="Tutorial/Pannel5"]
+layout_mode = 0
 offset_left = 992.0
 offset_top = 608.0
 offset_right = 1370.0
@@ -409,12 +424,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Tutorial/Pannel6"]
+layout_mode = 0
 offset_top = -320.0
 offset_right = 336.0
 offset_bottom = 441.0
 theme_override_styles/panel = ExtResource("13_xajg0")
 
 [node name="Panel2" type="Panel" parent="Tutorial/Pannel6"]
+layout_mode = 0
 offset_left = 336.0
 offset_right = 1360.0
 offset_bottom = 768.0
