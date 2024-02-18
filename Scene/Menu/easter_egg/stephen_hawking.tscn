@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://vetih6i63yws"]
 
-[ext_resource type="Texture2D" uid="uid://dte4nwhl427hr" path="res://Assets/Legume_sprite/Fruits and Vegetables/stephenhawking.jpg" id="1_4qmvc"]
 [ext_resource type="Script" path="res://Scene/Menu/easter_egg/stephen_hawking.gd" id="1_rxw5g"]
+[ext_resource type="Texture2D" uid="uid://kn2sxcxico5l" path="res://Scene/Menu/easter_egg/UltimateVegetable.jpg" id="2_hd4vl"]
 [ext_resource type="FontFile" uid="uid://b7qf1ys3xohb5" path="res://font/Minecraft.ttf" id="2_ikegd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f265n"]
@@ -41,7 +41,7 @@ offset_top = 16.0
 offset_right = 2384.0
 offset_bottom = 2016.0
 scale = Vector2(0.255, 0.255)
-texture = ExtResource("1_4qmvc")
+texture = ExtResource("2_hd4vl")
 
 [node name="Label" type="Label" parent="ColorRect/TextureRect"]
 layout_mode = 0
@@ -56,6 +56,7 @@ label_settings = SubResource("LabelSettings_f265n")
 horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 464.0
 offset_top = 640.0
 offset_right = 834.0
